@@ -7,16 +7,16 @@
 		<hot></hot>
 		<countdown> </countdown>
 		<spike></spike>
-		<purchase></purchase>
+		<purchase></purchase>		
+		<east-home></east-home>
 		<crx></crx>
-		<product-list></product-list>
+		<Recommend></Recommend>		
 		<bottom></bottom>
 	</div>
 </template>
 
 <script>
-	import Bottom from "@/components/Footer"
-	import SearchBar from "@/components/Home/SearchBar"
+	import SearchBar from "@/components/SearchBar"
 	import Swiper from "@/components/Home/Swiper"
 	import Banner from "@/components/Home/Banner"
 	import Navigation from "@/components/Home/Navigation"
@@ -24,8 +24,10 @@
 	import Countdown from "@/components/Home/Countdown"
 	import Spike from "@/components/Home/Spike"
 	import Purchase from "@/components/Home/Purchase"
+	import EastHome from "@/components/Home/EastHome"
 	import Crx from "@/components/Home/Crx"
-	import ProductList from "@/components/ProductList"
+	import Recommend from "@/components/Home/Recommend"
+	import Bottom from "@/components/Footer"
 	
 	
 	export default {
@@ -39,9 +41,10 @@
 			Hot,
 			Countdown,
 			Spike,
-			Purchase,
+			Purchase,			
+			EastHome,
 			Crx,
-			ProductList
+			Recommend
 		}
 	}
 </script>

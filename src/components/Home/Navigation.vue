@@ -75,19 +75,20 @@
 	.navigation ul li {
 		float: left;
 		width: 20%;
-		margin-bottom: 25px;
+		margin-bottom: 15px;
 	}
 	
 	.navigation ul li img {
 		width: 50px;
 		height: 50px;
+		margin-bottom: 5px;
 	}
 	
 	.navigation a {
 		display: block;
 		text-decoration: none;
 		color: #333;
-		font-size: 12;
+		font-size: 10px;
 		display: block;
 	}
 </style>

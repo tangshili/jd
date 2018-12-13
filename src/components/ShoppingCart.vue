@@ -40,7 +40,7 @@
 
 		<!--下拉-->
 		<div class="crx">
-			<p>——————⊰&nbsp;&nbsp;可能您还想要&nbsp;&nbsp;⊰——————</p>
+			<p>————————————&nbsp;&nbsp;为您推荐&nbsp;&nbsp;————————————</p>
 		</div>
 		<!--结算-->
 		<div class="flex jie">
@@ -398,7 +398,7 @@
 	.crx {
 		line-height: 40px;
 		text-align: center;
-		background-color:#ddd;
+		background-color:#F5F5F5;
 		height:40px;
 		width:100%;
 		font-size:14px;

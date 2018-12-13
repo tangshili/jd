@@ -3,19 +3,22 @@
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
-				<a href="#"><img src="../../assets/images/ad1.jpg"></a>
+				<a href="#"><img src="../../assets/images/swiper-01.jpg"></a>
 			</div>
 			<div class="swiper-slide">
-				<a href="#"><img src="../../assets/images/ad2.jpg"></a>
+				<a href="#"><img src="../../assets/images/swiper-02.jpg"></a>
 			</div>
 			<div class="swiper-slide">
-				<a href="#"><img src="../../assets/images/ad3.jpg"></a>
+				<a href="#"><img src="../../assets/images/swiper-03.jpg"></a>
 			</div>
 			<div class="swiper-slide">
-				<a href="#"><img src="../../assets/images/ad4.jpg"></a>
+				<a href="#"><img src="../../assets/images/swiper-04.jpg"></a>
 			</div>
 			<div class="swiper-slide">
-				<a href="#"><img src="../../assets/images/ad5.jpg"></a>
+				<a href="#"><img src="../../assets/images/swiper-05.jpg"></a>
+			</div>
+			<div class="swiper-slide">
+				<a href="#"><img src="../../assets/images/swiper-06.jpg"></a>
 			</div>
 		</div>
 		<div class="swiper-pagination"></div>
