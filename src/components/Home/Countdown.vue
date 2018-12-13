@@ -83,15 +83,12 @@
 		font-size: 12px;
 		margin-right: 5px;
 		margin-top: 5px;
-		  
 	}
 	
-	.count-down .span{
-		  border: 1px solid #ccc;
-    padding: 1px 2px;
+	.count-down .span {
+		border: 1px solid #ccc;
+		padding: 1px 2px;
 	}
-	
-	
 	
 	.count-down .span-2 {
 		padding-top: 5px;

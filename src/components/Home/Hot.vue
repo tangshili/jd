@@ -58,6 +58,7 @@
 	.floor-4 {
 		width: 100%;
 		height: 30px;
+		box-sizing: border-box;
 		
 	}
 	
@@ -105,6 +106,7 @@
 		padding: 0px 5px;
 		box-sizing: border-box;
 		font-size:14px;
+		box-sizing: border-box;
 	}
 	
 	.floor-4 .line {
@@ -136,6 +138,7 @@
 	
 	.floor4-banner ul li {
 		padding-right: 10px;
+		box-sizing: border-box;
 	}
 	
 	.floor4-banner img {

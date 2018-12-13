@@ -1,14 +1,15 @@
 <template>
 	<div class="user-center">
-		<h1>个人中心</h1>
-		<bottom></bottom>
+		<h1>个人中心</h1>		
 		<tops></tops>
-		<user-coupon></user-coupon>
 		<user-ele></user-ele>
+		<user-coupon></user-coupon>
+		
 		<user-foots></user-foots>
 		<user-pay></user-pay>
 		<user-serve></user-serve>
 		<user-tools></user-tools>
+		<bottom></bottom>
 		
 	</div>
 </template>

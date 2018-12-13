@@ -51,6 +51,7 @@
 		text-align: center;
 		display: flex;
 		border-bottom: 1px solid #ccc;
+		box-sizing: border-box;
 	}
 	
 	.top-bar a {
