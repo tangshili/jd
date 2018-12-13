@@ -8,7 +8,8 @@
 		<countdown> </countdown>
 		<spike></spike>
 		<purchase></purchase>
-		<productlist></productlist>
+		<crx></crx>
+		<product-list></product-list>
 		<bottom></bottom>
 	</div>
 </template>
@@ -23,6 +24,7 @@
 	import Countdown from "@/components/Home/Countdown"
 	import Spike from "@/components/Home/Spike"
 	import Purchase from "@/components/Home/Purchase"
+	import Crx from "@/components/Home/Crx"
 	import ProductList from "@/components/ProductList"
 	
 	
@@ -38,6 +40,7 @@
 			Countdown,
 			Spike,
 			Purchase,
+			Crx,
 			ProductList
 		}
 	}

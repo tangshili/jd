@@ -46,7 +46,7 @@ export default new Router({
 		name: 'search',
 		component: Search
 	}, {
-		path: '/product',
+		path: '/product/:id',
 		name: 'product',
 		component: Product,
 		children:[{

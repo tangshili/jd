@@ -183,8 +183,8 @@
 
 <style>
 	* {
-		margin: 0rem;
-		padding: 0rem;
+		margin: 0px;
+		padding: 0px;
 	}
 	
 	html {
@@ -218,14 +218,14 @@
 	}
 	
 	.check-box {
-		width: 0.3rem;
-		height: 0.3rem;
+		width: 15px;
+		height: 15px;
 		background-image: url(../assets/images/select.png);
 		background-size: contain;
-		margin-top: 0.6rem;
+		margin-top: 30px;
 		position: relative;
-		right: 0.1rem;
-		top: 0.13rem;
+		right: 5px;
+		top: 6px;
 	}
 	
 	.check-box.selected {
@@ -233,7 +233,7 @@
 	}
 	
 	.shopping-cart ul {
-		margin: 0rem auto;
+		margin: 0px auto;
 		box-sizing: border-box;
 		/*background-color: chartreuse;*/
 	}
@@ -248,59 +248,59 @@
 	
 	#product  li {
 		box-sizing: border-box;
-		padding: 0.1rem 0.25rem;
+		padding: 10px 12px;
 	}
 	
 	.left {
-		width: 0.01rem;
+		width: 2px;
 		height: auto;
 		box-sizing: border-box;
 		position: relative;
 	}
 	
 	.left .image01 {
-		margin-top: 0.3rem;
+		margin-top: 15px;
 	}
 	
 	.left .image01 img {
-		width: 0.3rem;
-		height: 0.3rem;
+		width: 15px;
+		height: 15px;
 	}
 	/*right*/
 	
 	.right {
-		box-shadow: 0rem 0rem 0.15rem #ddd;
-		margin-left: -6rem;
-		width: 4.8rem;
+		box-shadow: 0px 0px 15px #ddd;
+		margin-left: -30px;
+		width: 240px;
 		/*	background-color: maroon;*/
 	}
 	
 	.right .content {
-		margin: 0.4rem 0rem 0.15rem;
+		margin: 20px 0px 7px;
 	}
 	
 	.right .content .inner {
 		box-sizing: border-box;
-		padding: 0rem 0.2rem;
+		padding: 0px 10px;
 	}
 	
 	.image {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 75px;
+		height: 75px;
 		box-sizing: border-box;
 		display: inline-block;
-		margin-left: 0.2rem;
+		margin-left: 10px;
 		/*background-color: blue;*/
 	}
 	
 	.image img {
-		width: 1.5rem;
-		height: 1.5rem;
+		width: 75px;
+		height: 75px;
 	}
 	/*text*/
 	
 	.text {
-		margin-left: -1.4rem;
+		margin-left: -70px;
 		box-sizing: border-box;
 		/*background-color: violet;*/
 	}
@@ -311,71 +311,71 @@
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
-		height: 3em;
-		width: 4.2rem;
+		/*height: 150px;
+		width: 210px;*/
 		/*border: 0.01rem solid saddlebrown;*/
-		font-size: 0.25rem;
+		font-size: 12px;
 		color: black;
 		font-weight: normal;
 	}
 	
-	.text h5 {
-		font-size: 0.22rem;
+	/*.text h5 {
+		font-size: 12px;
 		color: #666;
 		font-weight: normal;
-	}
+	}*/
 	
 	.text p {
-		font-size: 0.1rem;
+		font-size: 8px;
 		color: #D67F8D;
-		margin: 0.1rem 0rem;
+		/*margin: 5px 0px;*/
 	}
 	
 	.text p .bai {
-		font-size: 0.05rem;
+		font-size: 10px;
 	}
 	/*bot*/
 	
 	.bot {
-		margin-left: -1.4rem;
-		line-height: 0.4rem;
+		margin-left: -70px;
+		line-height: 20px;
 		/*	background-color: salmon;*/
 	}
 	
 	.money {
-		font-size: 0.2rem;
+		font-size: 12px;
 		color: #F62F33;
 		/*background-color: khaki;*/
 	}
 	
 	.money #num {
 		font-weight: bold;
-		font-size: 0.3rem;
+		font-size: 16px;
 	}
 	
 	.choose {
 		display: inline-block;
 		box-sizing: border-box;
-		font-size: 0.3rem;
+		font-size: 15px;
 		font-weight: bold;
 		text-align: right;
-		padding-right: 0.3rem;
+		padding-right: 15px;
 		position: relative;
 		/*background-color: darkorange;*/
 	}
 	
 	.choose #minus {
 		position: absolute;
-		right: 1.2rem;
+		right: 60px;
 		border: 1px solid #ddd;
 	}
 	
 	.choose #num1 {
 		position: absolute;
-		right: 0.5rem;
-		width: 0.6rem;
+		right: 25px;
+		width: 30px;
 		height: 100%;
-		font-size: 0.24rem;
+		font-size: 12px;
 		font-weight: normal;
 		text-align: center;
 		border: 1px solid #ddd;
@@ -383,7 +383,7 @@
 	
 	.choose #add {
 		position: absolute;
-		right: 0rem;
+		right: 0px;
 		border: 1px solid #ddd;
 	}
 	
@@ -395,27 +395,28 @@
 		cursor: pointer;
 	}
 	/*下拉*/
-	
-	.crx p{
-		line-height: 0.8rem;
+	.crx {
+		line-height: 40px;
 		text-align: center;
-		margin-top:10px;
 		background-color:#ddd;
-		height:0.8rem;
+		height:40px;
 		width:100%;
 		font-size:14px;
+	}
+	.crx p{
+		padding-top:2px;
 	}
 	/*num*/
 	/*结算*/
 	
 	.jie {
-		padding: 0rem 0.25rem;
-		font-size: 0.3rem;
-		line-height: 1rem;
+		padding: 0px 12px;
+		font-size: 15px;
+		line-height: 50px;
 		position: fixed;
-		bottom: 0.9rem;
+		bottom: 45px;
 		width: 100%;
-		box-shadow: 0rem 0rem 0.15rem #ddd;
+		box-shadow: 0px 0px 7px #ddd;
 		background-color: white;
 		z-index: 9999;
 	}
@@ -425,18 +426,18 @@
 	}
 	
 	.jie .all img {
-		width: 0.3rem;
-		height: 0.3rem;
+		width: 15px;
+		height: 15px;
 	}
 	
 	.jie .all #ch {
-		margin-left: -0.08rem;
+		margin-left: -4px;
 		font-size:12px;
 		
 	}
 	
 	.jie .he {
-		margin-left: -1rem;
+		margin-left: -50px;
 		/*font-weight: bold;*/
 		/*	background-color: blue;*/
 	}
@@ -453,10 +454,10 @@
 	}
 	
 	.jie .go {
-		margin-left: 1rem;
+		margin-left: 50px;
 		text-align: center;
 		color: #F8ECEB;
-		height: 1rem;
+		height: 50px;
 		background-color: #FB321E;
 	}
 </style>

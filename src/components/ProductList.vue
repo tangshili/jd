@@ -1,5 +1,6 @@
 <template>
 	<div class="product-list clear">
+		
 		<div class='product' v-for="(item,index) in products">
 			<a :href='item.id'>
 				<div class='product-image'>
@@ -150,4 +151,5 @@
 		width:100px;
 		height:100px;
 	}
+	
 </style>

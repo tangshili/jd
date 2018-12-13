@@ -76,7 +76,7 @@
 	
 	footer ul li {
 		flex: 1;
-		/*padding-top: 5px;*/
+		padding-top: 11px;
 		list-style: none;
 	}
 	

@@ -1,46 +1,52 @@
 <template>
 	<div class="spike weui-flex">
-			<div class="spike-1" style="flex: 1;">
-				<img src="../../assets/images/5-1.png" />
-				<span href="#">¥75</span>
-				<i>¥88</i>
+			<div class="spike-1 " style="flex: 1;" v-for="(item,index) in spike">
+				<img :src="item.image" />
+				<span>¥{{item.price1}}</span>
+				<i>¥ {{item.price2}}</i>
 			</div>
-			<div class="spike-2" style="flex: 1;">
-				<img src="../../assets/images/5-2.png"/>
-				<span href="#">¥1098</span>
-				<i>¥3288</i>
-			</div>
-			<div class="spike-3" style="flex: 1;">
-				<img src="../../assets/images/5-3.png" />
-				<span href="#">¥4568</span>
-				<i>¥5800</i>
-			</div>
-			<div class="spike-4" style="flex: 1;">
-				<img src="../../assets/images/5-4.png" />
-				<span href="#">¥39</span>
-				<i>¥58</i>
-			</div>
-			<div class="spike-5" style="flex: 1;">
-				<img src="../../assets/images/5-5.png" />
-				<span href="#">¥3280</span>
-				<i>¥4580</i>
-			</div>
+			
 	</div>
 </template>
 
 <script>
-//	export default {
-//		data() {
-//			return {
-//				spike: [{
-//					id:1,
-//					title: '',
-//					price:
-//					image: repuire(),				
-//				}]
-//			}
-//		}
-//	}
+	export default {
+		data() {
+			return {
+				spike: [{
+					id:1,
+					title: '',
+					price1:75,
+					price2:88,
+					image: require('../../assets/images/5-1.png')			
+				},{
+					id:2,
+					title: '',
+					price1:1098,
+					price2:3288,
+					image: require('../../assets/images/5-2.png')			
+				},{
+					id:4,
+					title: '',
+					price1:4568,
+					price2:5800,
+					image: require('../../assets/images/5-3.png')			
+				},{
+					id:4,
+					title: '',
+					price1:39,
+					price2:58,
+					image: require('../../assets/images/5-4.png')			
+				},{
+					id:5,
+					title: '',
+					price1:3280,
+					price2:4580,
+					image: require('../../assets/images/5-5.png')			
+				}]
+			}
+		}
+	}
 </script>
 
 <style>
