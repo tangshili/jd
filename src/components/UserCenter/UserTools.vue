@@ -7,7 +7,7 @@
 				<span v-text="item.test"></span>
 			</div>
 		</div>
-		<div class="pay">
+		<div class="pay" style="padding-bottom:20px; background-color:#fff;">
 			<div class="pay-item"  v-for="(item,index) in payss">
 				<slot></slot>
 				<i class="fa" :class="item.icon"></i>
@@ -57,21 +57,16 @@
 	.usertools{
 		box-sizing: border-box;
 		width: 100%;
-		height: 100px;
-		background-color: #fff;
-		margin-bottom: 1rem;
 	}
 	
 	.pay {
 		box-sizing: border-box;
-		/*padding: 0rem 0.8rem;*/
 		display: flex;
 		display: -webkit-flex;
 	}
 	
 	.pay .pay-item {
 		width: 25%;
-		height: 100px;
 		flex: 1;
 		background-color: #fff;
 		text-align: center;

@@ -40,14 +40,11 @@
 	.user-coupon{
 		box-sizing: border-box;
 		width: 100%;
-		height: 100px;
-		background-color: #fff;
-		margin-bottom: 50px;
+		height: 80px;
 	}
 	
 	.pay {
 		box-sizing: border-box;
-		/*padding: 0rem 0.8rem;*/
 		display: flex;
 		display: -webkit-flex;
 	}
@@ -58,14 +55,12 @@
 		flex: 1;
 		background-color: #fff;
 		text-align: center;
-		padding-top: 30px;
 	}
 	
 	.pay .pay-item span#red {
 		display: block;
 		padding-bottom: 10px;
 		color: #e93b3d;
-		/*background-color: skyblue;*/
 		font-size: 14px;
 	}
 	

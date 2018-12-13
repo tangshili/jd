@@ -75,7 +75,7 @@
 		position: fixed;
 		top: 0px;
 		left: 0px;
-		border-bottom: solid 1px #e5e5e5;
+		/*border-bottom: solid 1px #e5e5e5;*/
 		z-index: 9998;
 	}
 	

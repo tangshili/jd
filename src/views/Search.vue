@@ -1,17 +1,10 @@
 <template>
 
-	<div class="search-page">
-
-		
-
+	<div class="search-page" style="border-bottom: solid 1px #CCCCCC;">
 		<input type="text" v-model="keyword" name="" id="" value="" @focus="show=true" />
-
 		<product v-for="(item,index) in products" :id="item.id" :title="item.title" :image="item.image" :price="item.price"></product>
-
 		<bottom></bottom>
-
 		<search-page v-model="show" @search="search"></search-page>
-
 	</div>
 </template>
 
@@ -31,8 +24,8 @@
 			};
 		},
 		methods: {
-			search(val){
-				this.products = val;	
+			search(val) {
+				this.products = val;
 			}
 		},
 		components: {
@@ -42,18 +35,13 @@
 		},
 		created() {
 			console.log(this.$route);
-			
-			if(this.$route.params.product!=null){
+			if(this.$route.params.product != null) {
 				this.products = this.$route.params.product;
 			}
-			
-//			console.log(this.$router);
 		}
 	}
 </script>
 
 <style>
-	.search-bar {
-		border-bottom: solid 1px #CCCCCC;
-	}
+
 </style>

@@ -87,5 +87,6 @@
 	footer ul li .title {
 		display: block;
 		font-size: 12px;
+		background-color:#fff;
 	}
 </style>

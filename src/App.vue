@@ -5,9 +5,8 @@
 </template>
 
 <style>
-	html,
-	body,
-	#app {
+	html{
 		overflow-x: hidden;
+		/*overflow-x: -moz-hidden-unscrollable;*/
 	}
 </style>

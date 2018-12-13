@@ -3,12 +3,13 @@
 		<h1>个人中心</h1>		
 		<tops></tops>
 		<user-ele></user-ele>
-		<user-coupon></user-coupon>
-		
-		<user-foots></user-foots>
 		<user-pay></user-pay>
+		<user-coupon></user-coupon>		
+		<user-foots></user-foots>		
 		<user-serve></user-serve>
 		<user-tools></user-tools>
+		<crx></crx>
+		<recommend></recommend>
 		<bottom></bottom>
 		
 	</div>
@@ -23,6 +24,8 @@
 	import UserPay from "@/components/UserCenter/UserPay"
 	import UserServe from "@/components/UserCenter/UserServe"
 	import UserTools from "@/components/UserCenter/UserTools"
+	import Crx from "@/components/Home/Crx"
+	import Recommend from "@/components/Home/Recommend"
 	export default {
 		name: 'user',
 		components: {
@@ -33,11 +36,15 @@
 			UserFoots,
 			UserPay,
 			UserServe,
-			UserTools
+			UserTools,
+			Crx,
+			Recommend
 		}
 	}
 </script>
 
 <style>
-
+body{
+	background-color:#F7F7F7;
+}
 </style>

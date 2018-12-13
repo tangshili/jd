@@ -1,6 +1,6 @@
 <template>
 	<!--/轮播图/-->
-	<div class="swiper-container">
+	<div class="swiper-container" id="top-swiper">
 		<div class="swiper-wrapper">
 			<div class="swiper-slide">
 				<a href="#"><img src="../../assets/images/swiper-01.jpg"></a>
@@ -30,7 +30,7 @@
 	import "swiper/dist/css/swiper.min.css"
 	export default {
 		mounted: function() {
-			var swiper = new Swiper('.swiper-container', {
+			var swiper = new Swiper('#top-swiper', {
 				spaceBetween: 0,
 				centeredSlides: true,
 				autoplay: {
@@ -38,13 +38,9 @@
 					disableOnInteraction: false,
 				},
 				pagination: {
-					el: '.swiper-pagination',
+					el: '#top-swiper .swiper-pagination',
 					clickable: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
+				}
 			});
 		}
 	}

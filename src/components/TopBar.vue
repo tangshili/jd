@@ -1,6 +1,6 @@
 <template>
 
-	<div class="top-bar">
+	<div class="top-bar" style="border-bottom: solid 1px #e5e5e5;">
 		<div class="go-back">
 			<a href="#" @click.prevent="goBack"><i class="fa fa-angle-left"></i></a>
 		</div>
@@ -64,7 +64,6 @@
 		height: 44px;
 		text-align: center;
 		display: flex;
-		border-bottom: solid 1px #e5e5e5;
 	}
 	
 	.top-bar a {

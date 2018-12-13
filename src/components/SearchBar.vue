@@ -10,21 +10,19 @@
 		<div class="user">
 			<span class="fa fa-user"></span>
 		</div>
-			
-		<search-page v-model="show"  @search="search"></search-page>
+
+		<search-page v-model="show" @search="search"></search-page>
 	</div>
 
 </template>
 
 <script>
-	
-	
 	import SearchPage from "@/components/SearchPage"
 	export default {
 		data() {
 			return {
 				fixed: false,
-				show:false
+				show: false
 			};
 		},
 		methods: {},
@@ -33,15 +31,20 @@
 		created() {
 			console.log("search-bar");
 		},
-		methods:{
-			search(val){
+		methods: {
+			search(val) {
 				console.log(val);
-				this.$router.push({name:'search',params:{product:val}});
+				this.$router.push({
+					name: 'search',
+					params: {
+						product: val
+					}
+				});
 			}
 		},
 		mounted() {
 			var self = this;
-			window.addEventListener("scroll", function() {
+			window.addEventListener('scroll', function(){
 				var scrollTop = document.body.scrollTop || window.pageYOffset || document.documentElement.scrollTop;
 				if(scrollTop > 10) {
 					self.fixed = true;
@@ -49,7 +52,8 @@
 					self.fixed = false;
 				}
 			});
-		},components:{
+		},
+		components: {
 			SearchPage
 		}
 	}
@@ -86,7 +90,7 @@
 		border: none;
 		outline: none;
 		padding-left: 40px;
-		background-color: #f7f7f7;;
+		background-color: #f7f7f7;
 		box-sizing: border-box;
 	}
 	

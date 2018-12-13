@@ -64,7 +64,7 @@
 	.product-list{
 		background-color:#ccc;
 		/*margin-top: 20px;*/
-		margin-bottom:206px;
+		margin-bottom:80px;
 		
 	}
 	img {
@@ -144,6 +144,7 @@
 		width:100%;
 		height:100px;
 		text-align: center;
+		float:left;
 		background-color:white;
 		
 	}

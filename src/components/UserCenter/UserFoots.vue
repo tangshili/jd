@@ -34,14 +34,13 @@
 	.userfoots{
 		box-sizing: border-box;
 		width: 100%;
-		height: 100px;
+		height: 80px;
 		background-color: #fff;
-		margin-bottom: 1rem;
+		margin-bottom:10px;
 	}
 	
 	.pay {
 		box-sizing: border-box;
-		/*padding: 0rem 0.8rem;*/
 		display: flex;
 		display: -webkit-flex;
 	}
@@ -52,7 +51,6 @@
 		flex: 1;
 		background-color: #fff;
 		text-align: center;
-		padding-top: 30px;
 	}
 	
 	.pay .pay-item span#red {
@@ -66,6 +64,5 @@
 	.pay .pay-item span {
 		font-size: 12px;
 		color: #666;
-		margin-top: -0.1rem;
 	}
 </style>

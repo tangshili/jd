@@ -47,18 +47,17 @@
 			search() {
 				axios.post(this.serveRoot + "/index.php/api/index/searchProduct", qs.stringify({
 					keyword: this.keyword,
-					id: 123,
-					order: 456
 				})).then(res => {
 					this.hide();
 					this.$emit('search', res.data);
-				}).catch(err => {});
+				}).catch(err => {
+					this.hide();
+				});
 			},
 			
 			hide(){
-				this.hide();
-				this.$emit('search',res.data);
-				document.body.style.overflow = "hidden";
+				this.show = false;
+				document.body.style.overflow = "auto";
 			}
 		}
 	}

@@ -21,7 +21,6 @@
 		line-height: 40px;
 		background-color: #fff;
 		margin-bottom: 1rem;
-		margin-top: 110px;
 	}
 	
 	a{

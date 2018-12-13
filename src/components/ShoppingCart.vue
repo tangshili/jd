@@ -39,9 +39,7 @@
 		</ul>
 
 		<!--下拉-->
-		<div class="crx">
-			<p>————————————&nbsp;&nbsp;为您推荐&nbsp;&nbsp;————————————</p>
-		</div>
+
 		<!--结算-->
 		<div class="flex jie">
 			<div class="flex-item all">
@@ -57,7 +55,6 @@
 			<div class="flex-item go">去结算（<span v-text="total"></span>）</div>
 		</div>
 		<!--end-->
-		
 
 	</div>
 </template>
@@ -79,35 +76,35 @@
 					title: 'HR赫莲娜绿宝瓶修护睡眠晚霜50ml(补水保湿 弹润 舒缓滋润肌肤 面霜 晚霜) 绿宝瓶晚霜50ml',
 					price: 1580,
 					count: 1,
-					image:  require('../assets/images/product-2.png'),
+					image: require('../assets/images/product-2.png'),
 					selected: false,
 				}, {
 					id: 3,
 					title: 'HR赫莲娜澄光肌活精华乳液50ml（光感透亮 保湿滋润 改善黯沉 亮肌美肌 精华液） 精华乳液50ml',
 					price: 1380,
 					count: 1,
-					image:  require('../assets/images/product-3.png'),
+					image: require('../assets/images/product-3.png'),
 					selected: false,
 				}, {
 					id: 3,
 					title: 'HR赫莲娜绿宝瓶明眸焕颜精华礼盒（明星同款精华礼盒 护肤套装 修护眼周 补水保湿  ） 绿宝瓶精华眼霜套装',
 					price: 1700,
 					count: 1,
-					image:  require('../assets/images/product-4.png'),
+					image: require('../assets/images/product-4.png'),
 					selected: false,
 				}, {
 					id: 3,
 					title: '【国内专柜秒发】娇兰水合青春保湿精华露 保湿滋润补水 光滑紧致 50ml',
 					price: 1489,
 					count: 1,
-					image:  require('../assets/images/product-5.png'),
+					image: require('../assets/images/product-5.png'),
 					selected: false,
 				}, {
 					id: 3,
 					title: '丸美tokyo日本酒御龄冰肌套装 酒粕补水保湿抗皱提亮肤色收缩毛孔提拉紧致官方旗舰店女 洁面+水+乳+精华液+霜+眼部组合',
 					price: 3678,
 					count: 1,
-					image:  require('../assets/images/product-6.png'),
+					image: require('../assets/images/product-6.png'),
 					selected: false,
 				}],
 				selected: []
@@ -190,7 +187,8 @@
 	html {
 		font-size: calc(100vw/7.5);
 	}
-	body{
+	
+	body {
 		font-size: 16px;
 	}
 	
@@ -200,6 +198,7 @@
 	
 	.shopping-cart ul li {
 		list-style: none;
+		margin-bottom: 3px;
 	}
 	
 	.flex {
@@ -235,20 +234,12 @@
 	.shopping-cart ul {
 		margin: 0px auto;
 		box-sizing: border-box;
-		/*background-color: chartreuse;*/
 	}
 	
-	/*#app ul li:first-child {
-		margin-top: 1.6rem;
-	}*/
-	
-	/*ul:first-of-type {
-		margin-top: 1.4rem;
-	}*/
-	
-	#product  li {
+	#product li {
 		box-sizing: border-box;
 		padding: 10px 12px;
+		background-color: #fff;
 	}
 	
 	.left {
@@ -272,7 +263,6 @@
 		box-shadow: 0px 0px 15px #ddd;
 		margin-left: -30px;
 		width: 240px;
-		/*	background-color: maroon;*/
 	}
 	
 	.right .content {
@@ -290,7 +280,7 @@
 		box-sizing: border-box;
 		display: inline-block;
 		margin-left: 10px;
-		/*background-color: blue;*/
+		padding-top: 20px;
 	}
 	
 	.image img {
@@ -302,7 +292,7 @@
 	.text {
 		margin-left: -70px;
 		box-sizing: border-box;
-		/*background-color: violet;*/
+		line-height: 1.5em;
 	}
 	
 	.text h4 {
@@ -311,24 +301,14 @@
 		-webkit-line-clamp: 2;
 		-webkit-box-orient: vertical;
 		text-overflow: ellipsis;
-		/*height: 150px;
-		width: 210px;*/
-		/*border: 0.01rem solid saddlebrown;*/
 		font-size: 12px;
 		color: black;
 		font-weight: normal;
 	}
 	
-	/*.text h5 {
-		font-size: 12px;
-		color: #666;
-		font-weight: normal;
-	}*/
-	
 	.text p {
 		font-size: 8px;
 		color: #D67F8D;
-		/*margin: 5px 0px;*/
 	}
 	
 	.text p .bai {
@@ -339,20 +319,16 @@
 	.bot {
 		margin-left: -70px;
 		line-height: 20px;
-		/*	background-color: salmon;*/
 	}
 	
 	.money {
 		font-size: 12px;
 		color: #F62F33;
-		/*background-color: khaki;*/
-	}
-	
+	}	
 	.money #num {
 		font-weight: bold;
 		font-size: 16px;
-	}
-	
+	}	
 	.choose {
 		display: inline-block;
 		box-sizing: border-box;
@@ -361,15 +337,12 @@
 		text-align: right;
 		padding-right: 15px;
 		position: relative;
-		/*background-color: darkorange;*/
-	}
-	
+	}	
 	.choose #minus {
 		position: absolute;
 		right: 60px;
 		border: 1px solid #ddd;
-	}
-	
+	}	
 	.choose #num1 {
 		position: absolute;
 		right: 25px;
@@ -379,36 +352,32 @@
 		font-weight: normal;
 		text-align: center;
 		border: 1px solid #ddd;
-	}
-	
+	}	
 	.choose #add {
 		position: absolute;
 		right: 0px;
 		border: 1px solid #ddd;
-	}
-	
+	}	
 	.choose #add,
-	.choose #minus {
-		/*background-color: red;*/
+	.choose #minus {		
 		width: 20px;
 		text-align: center;
 		cursor: pointer;
 	}
-	/*下拉*/
+	/*下拉*/	
 	.crx {
 		line-height: 40px;
 		text-align: center;
-		background-color:#F5F5F5;
-		height:40px;
-		width:100%;
-		font-size:14px;
-	}
-	.crx p{
-		padding-top:2px;
+		background-color: #F5F5F5;
+		height: 40px;
+		width: 100%;
+		font-size: 14px;
+	}	
+	.crx p {
+		padding-top: 2px;
 	}
 	/*num*/
-	/*结算*/
-	
+	/*结算*/	
 	.jie {
 		padding: 0px 12px;
 		font-size: 15px;
@@ -419,40 +388,28 @@
 		box-shadow: 0px 0px 7px #ddd;
 		background-color: white;
 		z-index: 9999;
-	}
-	
-	.jie .all {
-		/*background-color: red;*/
-	}
-	
+	}	
+	.jie .all {}	
 	.jie .all img {
 		width: 15px;
 		height: 15px;
-	}
-	
+	}	
 	.jie .all #ch {
 		margin-left: -4px;
-		font-size:12px;
-		
-	}
-	
+		font-size: 12px;
+	}	
 	.jie .he {
 		margin-left: -50px;
-		/*font-weight: bold;*/
-		/*	background-color: blue;*/
-	}
-	
+	}	
 	.jie .he #yu {
 		font-weight: bold;
-	}
-	
+	}	
 	.jie .he #jiao {
 		font-weight: bold;
-	}
+	}	
 	.jie .he .qian {
 		font-weight: bold;
-	}
-	
+	}	
 	.jie .go {
 		margin-left: 50px;
 		text-align: center;

@@ -18,22 +18,18 @@
 	import Swiper from "swiper"
 	import "swiper/dist/css/swiper.min.css"
 	export default {
-		mounted: function() {
-			var swiper = new Swiper('#ad-swiper', {
+		mounted() {
+			let swiper = new Swiper('#ad-swiper', {
 				spaceBetween: 0,
-				centeredSlides: true,
+//				centeredSlides: true,
 				autoplay: {
 					delay: 2500,
 					disableOnInteraction: false,
 				},
 				pagination: {
-					el: '.swiper-pagination',
+					el: '#ad-swiper .swiper-pagination',
 					clickable: true,
-				},
-				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
-				},
+				}
 			});
 		}
 	}
@@ -45,10 +41,10 @@
 	width:100%;
 	position:relative;
 }
-#ad img{
+#ad>img{
 	width:100%;	
 }
-#ad .swiper-container{
+#ad-swiper{
 	width:70px;
 	height:70px;
 	overflow:hidden;
@@ -56,9 +52,17 @@
 	top:25px;
 	left:45px;
 }
-#ad .swiper-slide img{
-	width:inherit;
-	height:inherit;
-	float:left;
+
+#ad-swiper .swiper-wrapper{
+	/*width:70px;
+	height:70px;*/
+}
+#ad-swiper .swiper-slide{
+	/*width:70px;
+	height:70px;*/
+}
+#ad-swiper img{
+	width:70px;
+	height:70px;
 }
 </style>
