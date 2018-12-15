@@ -14,6 +14,7 @@ import Goods from './components/Goods.vue'
 import Comment from './components/Comment.vue'
 import Detail from './components/Detail.vue'
 import Recommend from './components/Recommend.vue'
+import ProductDetail from './views/ProductDetail.vue'
 import Bt from "./views/Bt"
 import Admin from "./views/Admin"
 import AdminContent from './components/AdminContent.vue'
@@ -46,22 +47,9 @@ export default new Router({
 		name: 'search',
 		component: Search
 	}, {
-		path: '/product/:id',
+		path: '/product',
 		name: 'product',
-		component: Product,
-		children:[{
-			path:'goods',
-			component: Goods
-		},{
-			path:'detail',
-			component: Detail
-		},{
-			path:'comment',
-			component: Comment
-		},{
-			path:'recommend',
-			component: Recommend
-		}]
+		component: Product
 	}, {
 		path: '/bt',
 		name: 'bootstrap',

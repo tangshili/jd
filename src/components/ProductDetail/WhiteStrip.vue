@@ -1,7 +1,7 @@
 <template>
 	<div class="white-strip">
 		<div class="go-back">
-			<a href="#" @click.prevent="goBack">
+			<a href="#">
 				<p><span class="c">白条</span>白条支付即享3期免息,6期息费5折</p>
 			</a>
 		</div>
@@ -13,7 +13,7 @@
 		</div>
 		<ul class="menu-list" v-show="menuShow">
 			<div class="title" v-show="menuShow" @click="menuShow=false;">
-				<h6>打白条购买</h6><img class="close" src="img/close.png" /></div>
+				<h6>打白条购买</h6><img class="close" src="../../assets/images/close.png" /></div>
 			<!--<li>-->
 			<p>分期服务<span>(使用前的分期情况)</span></p>
 			<!--</li>-->
@@ -45,17 +45,13 @@
 </template>
 
 <script>
-	var app = new Vue({
-		el: '#app',
-		data: {
-			menuShow: false
-		},
-		methods: {
-			goBack: function() {
-				window.history.go(-1);
-			}
+	export default {
+		data() {
+			return {
+				menuShow: false
+			};
 		}
-	});
+	}
 </script>
 
 <style>
@@ -94,15 +90,16 @@
 	}
 	
 	.menu-list {
-		position: absolute;
+		position: fixed;
 		z-index: 9999;
 		width: 100%;
-		top: 53px;
+		bottom: 0px;
 		left: 0px;
 		font-size: 14px;
 		margin: 0;
 		padding: 0px;
 		text-align: left;
+		background-color: #FFFFFF;
 		/*background: rgba(0, 0, 0, .9);*/
 	}
 	

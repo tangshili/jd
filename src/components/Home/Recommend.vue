@@ -23,41 +23,49 @@
 		data() {
 			return {
 				products: [{
+						id: 1,
 						title: '丸美（MARUBI）眼霜去细纹 提拉紧致淡化黑眼圈眼袋淡纹眼部精华 （提眼袋 紧眼角）多肽眼精华20ml+5ml*2',
 						price: 538,
 						image: require('../../assets/images/recommend-1.jpg')
 					},
 					{
+						id:2,
 						title: '美度(MIDO)瑞士手表 Baroncelli 贝伦赛丽系列 全自动机械女士腕表 M007.207.36.291.00',
 						price: 7301,
 						image: require('../../assets/images/recommend-2.jpg')
 					},
 					{
+						id:3,
 						title: '水星家纺磨毛四件套加厚床单被套床上用品 希尔海岸 1.5M(5英尺)床',
 						price: 1209,
 						image: require('../../assets/images/recommend-3.jpg')
 					},
 					{
+						id:4,
 						title: '中超联赛 足金999奖杯颁奖金杯 中超冠军奖杯火神杯珍藏版 足球奖杯纪念品定制款',
 						price: 1180000,
 						image: require('../../assets/images/recommend-4.jpg')
 					},
 					{
+						id:5,
 						title: '戴森Dyson Airwrap 多功能美发造型器 卷发器 Airwrap美发棒',
 						price: 4998,
 						image: require('../../assets/images/recommend-5.jpg')
 					},
 					{
+						id:6,
 						title: 'HR赫莲娜绿宝瓶精华露 30ml（明星 精华 修护新生 补水保湿 防护 悦活 滋润）',
 						price: 980,
 						image: require('../../assets/images/recommend-6.jpg')
 					},
 					{
+						id:7,
 						title: '欧莱雅(LOREAL)复颜玻尿酸水光充盈导入眼霜15ml(女士眼霜 高浓度易吸收 填充细纹 减轻眼袋黑眼圈 紧致眼周)',
 						price: 280,
 						image: require('../../assets/images/recommend-7.jpg')
 					},
 					{
+						id:8,
 						title: '瑞士浪琴(Longines)手表 名匠系列男士自动机械表皮带女表情侣一对表 L2.793/128.4.78.3',
 						price: 22638,
 						image: require('../../assets/images/recommend-8.jpg')
@@ -154,7 +162,7 @@
 		width: 100%;
 		height: 100px;
 		text-align: center;
-		float:left;
+		float: left;
 		background-color: white;
 	}
 	

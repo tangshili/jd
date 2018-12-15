@@ -57,6 +57,7 @@
 			
 			hide(){
 				this.show = false;
+				this.$emit('input',false);
 				document.body.style.overflow = "auto";
 			}
 		}

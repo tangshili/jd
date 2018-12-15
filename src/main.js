@@ -12,6 +12,8 @@ import "./assets/css/reset.css"
 //import 'bootstrap/dist/css/bootstrap.min.css'
 Vue.config.productionTip = false;
 
+Vue.prototype.serveRoot = "http://api.niyinlong.com";
+
 new Vue({
   router,
   store,

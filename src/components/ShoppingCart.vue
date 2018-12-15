@@ -8,13 +8,13 @@
 				</div>
 				<div class="flex-item ">
 					<div class="flex content">
-						<div class="flex-item">
+						<div class="flex-item" @click="gotoProduct(item.id)">
 							<div class="image">
 								<img v-bind:src="item.image" />
 							</div>
 						</div>
-						<div class="flex-item inner">
-							<div class="text">
+						<div class="flex-item inner" >
+							<div class="text"  @click="gotoProduct(item.id)">
 								<h4 v-text="item.title"></h4>
 
 								<p>
@@ -157,6 +157,8 @@
 					}
 				}
 				console.log(this.selected);
+			},gotoProduct(id){
+				this.$router.push({path:'/product',query:{id:id}});
 			}
 		},
 		computed: {

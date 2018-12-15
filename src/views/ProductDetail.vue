@@ -1,78 +1,62 @@
 <template>
 
-	<div>
+	<div class="product-detail">
 		<top-bar>
-
-			<tab></tab>	
-
+			<tab></tab>
 		</top-bar>
-		<!--图片-->
-		<div class="banner">
-			<!--/轮播图/-->
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(item,index) in images">
-						<img :src="item"/>
-					</div>
-				</div>
-				<div class="swiper-pagination"></div>
-			</div>
+		<div class="banner" style="margin-top: 50px;">
+			<product-swiper></product-swiper>
 		</div>
-
-		<!--套餐选择-->
-		<!--商品详情-->
-		<!--商品评论-->
-		<!--商品推荐-->
-		<!--加入购物车&立即购买-->
+		<product-info></product-info>
+		<white-strip></white-strip>
+		<suit></suit>
+		<committed-to></committed-to>
+		<shop></shop>
 	</div>
 
 </template>
 
 <script>
 	import TopBar from "@/components/TopBar"
-	import Swiper from "swiper"
-	import Tab from "@/components/ProductDetail/TopNav";
+	import Tab from "@/components/ProductDetail/TopNav"
+	import WhiteStrip from "@/components/ProductDetail/WhiteStrip"
+	import ProductInfo from "@/components/ProductDetail/ProductInfo"
+	import ProductSwiper from "@/components/ProductDetail/ProductSwiper"
+	import Suit from "@/components/ProductDetail/Suit"
+	import CommittedTo from "@/components/ProductDetail/CommittedTo"
+	import Shop from "@/components/ProductDetail/Shop"
+	
 	export default {
 		data() {
-			return {
-				
-				images: [require('../assets/images/img-1.png'), require('../assets/images/img-2.png'), require('../assets/images/img-3.png'), require('../assets/images/img-4.png'), require('../assets/images/img-5.png'), require('../assets/images/img-6.png')]
-			};
+			return {};
 		},
-		methods: {
-
-		},
-		mounted(){
-			new Swiper('.swiper-container', {
-				pagination: {
-					el: '.swiper-pagination',
-				},
-				autoplay: true
-			});
-		},
+		methods: {},
+		mounted() {},
 		components: {
 			TopBar,
-			Tab
-
+			Tab,
+			WhiteStrip,
+			ProductInfo,
+			ProductSwiper,
+			Suit,
+			CommittedTo,
+			Shop
 		}
 	}
 </script>
 
 <style>
-	/*@import url("../assets/css/swiper.css");*/
-	
-	/**/
-	
+	@import url("../assets/css/swiper.css");
+	@import url("../assets/css/weui.css");
 	.banner {
 		width: 100%;
 	}
 	
-	.banner .swiper-wrapper {
-		display: block;
+	.product-detail .swiper-wrapper {
 		width: 100%;
 	}
 	
-	.banner .swiper-wrapper img {
+	.product-detail .swiper-wrapper img {
 		width: 100%;
 	}
 </style>

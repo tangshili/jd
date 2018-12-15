@@ -1,27 +1,24 @@
 <template>
 	<div class="suit">
-
 		<div class="go-back">
-
 			<a href="#" @click.prevent="goBack">
 				<p><span class="c">已选</span> 五件套（洁面乳+润养露+紧致乳+精华乳+眼精华）,1个</p>
 			</a>
 		</div>
-		<!--<div class="slot">
-						<slot></slot>
-					</div>-->
 		<div class="menu">
 			<a class="shows" href="#" @click.prevent="menuShow=true"><i>···</i></a>
 		</div>
 
 		<div class="menu-list" v-show="menuShow">
-			<div class="title" v-show="menuShow" @click="menuShow=false;">
-				<img class="img-1 left" src="https://m.360buyimg.com/mobilecms/s750x750_jfs/t22714/54/125400072/782590/d338d566/5b260c8eN4b16c5fc.png!q80.dpg.webp" />
+			<div class="suit-title" v-show="menuShow" @click="menuShow=false;">
+				<img class="img-1 left" src="../../assets/images/suit-img.png" />
 				<p class="prop left" id="popupSkuChoose">
 					<a href="#">¥<em>1088</em>.00</a>
-					<b class="c">已选</b> 五件套（洁面乳+润养露+紧致乳+精华乳+眼精华）,1个</p>
-				<img class="close  right" src="img/close.png" /></div>
-			<p>套装</p>
+					<b class="c">已选</b> 五件套（洁面乳+润养露+紧致乳+精华乳+眼精华）,1个
+				</p>
+				<img class="close  right" src="../../assets/images/close.png" />
+			</div>
+			<h4>套装</h4>
 			<div class="spans clear">
 				<span>三件套（洁面乳+润养露+紧致乳）</span>
 				<span>两件套（润养露+紧致乳）</span>
@@ -31,7 +28,7 @@
 				<span>五件套（洁面乳+润养露+紧致乳+精华乳+眼精华）</span><span>七件套</span>
 			</div>
 			<div class="num clear">
-				<h5>数量</h5>
+				<h2>数量</h2>
 				<div class="spanss">
 					<span class="bg">-</span>
 					<span>0</span>
@@ -46,12 +43,13 @@
 </template>
 
 <script>
-	var app = new Vue({
-		el: '#app',
-		data: {
-			menuShow: false
-		},
-	});
+	export default {
+		data() {
+			return {
+				menuShow: false
+			};
+		}
+	}
 </script>
 
 <style>
@@ -74,6 +72,8 @@
 		height: 44px;
 		text-align: center;
 		display: flex;
+		border-top:5px solid #E8E8ED;
+		border-bottom:5px solid #E8E8ED;
 	}
 	
 	.suit a {
@@ -124,7 +124,7 @@
 		line-height: 50px;
 	}
 	
-	.suit .menu-list .num h5 {
+	.suit .menu-list .num h2 {
 		color: #ccc;
 		font-size: 14px;
 		display: inline-block;
@@ -155,33 +155,32 @@
 		font-size: 20px;
 	}
 	
-	.menu-list {
+	.suit .menu-list {
 		position: fixed;
 		z-index: 9999;
 		width: 100%;
-		top: -10px;
+		bottom: 0px;
 		left: 0px;
 		font-size: 14px;
 		margin: 0;
 		padding: 0px;
 		text-align: left;
-		background-color: white;
-		/*background: rgba(0, 0, 0, .9);*/
+		background-color: #ffffff;
 	}
 	
-	.menu-list p {
-		width: font-size:10px;
+	.suit .menu-list h4 {
+		font-size: 10px;
 		margin-bottom: 8px;
 		margin-left: 13px;
 		color: #ccc;
 		display: inline-block;
 	}
 	
-	.menu-list p span {
+	.suit .menu-list p span {
 		font-size: 14px;
 	}
 	
-	.menu-list a {
+	.suit .menu-list a {
 		color: #333333;
 		text-decoration: none;
 		line-height: 18px;
@@ -189,7 +188,7 @@
 		display: inline-block;
 	}
 	
-	.menu-list span {
+	.suit .menu-list span {
 		display: inline-block;
 		padding: 0 10px;
 		min-width: 20px;
@@ -207,12 +206,12 @@
 		font-size: 14px;
 	}
 	
-	.menu-list .spans span:active {
+	.suit .menu-list .spans span:active {
 		background-color: #FF0000;
 		color: white;
 	}
 	
-	.header-mask {
+	.suit .header-mask {
 		position: fixed;
 		top: 0px;
 		bottom: 0px;
@@ -251,21 +250,24 @@
 		display: block;
 	}
 	
-	.menu-list .title {
-		background-color: #f3f2f8;
-		height: 100px;
+	.menu-list .suit-title {
+		height: 80px;
 		width: 100%;
 		margin-bottom: 10px;
+		position: relative;
 	}
 	
-	.menu-list .title .img-1 {
+	.menu-list .suit-title .img-1 {
 		width: 90px;
 		height: 90px;
+		position: absolute;
+		top: -20px;
+		left: 0px;
 		display: inline-block;
 	}
 	
-	.menu-list .title .prop {
-		width: 60%;
+	.menu-list .suit-title .prop {
+		width: 80%;
 		white-space: normal;
 		overflow: hidden;
 		text-overflow: ellipsis;
@@ -273,15 +275,14 @@
 		font-size: 12px;
 		color: #333;
 		line-height: 1.4em;
-		padding-right: 10px;
-		padding-top: 14px;
+		padding: 0px 10px 10px 80px;
 	}
 	
-	.menu-list .title .prop b {
+	.menu-list .suit-title .prop b {
 		font-size: 12px;
 	}
 	
-	.menu-list .title .prop a {
+	.menu-list .suit-title .prop a {
 		font-size: 12px;
 		line-height: 40px;
 		color: #e4393c;
@@ -289,15 +290,15 @@
 		padding-top: 0px;
 	}
 	
-	.menu-list .title .prop a em {
+	.menu-list .suit-title .prop a em {
 		font-size: 16px;
 	}
 	
-	.menu-list .title .close {
+	.menu-list .suit-title .close {
 		width: 20px;
 		height: 20px;
-		padding-top: 15px;
+		margin-top: 15px;
 		float: right;
-		padding-right: 13px;
+		margin-right: 13px;
 	}
 </style>

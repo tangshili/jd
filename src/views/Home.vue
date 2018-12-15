@@ -10,7 +10,8 @@
 		<purchase></purchase>		
 		<east-home></east-home>
 		<crx></crx>
-		<Recommend></Recommend>		
+		<Recommend></Recommend>
+		<productdetail></productdetail>
 		<bottom></bottom>
 	</div>
 </template>
@@ -27,6 +28,7 @@
 	import EastHome from "@/components/Home/EastHome"
 	import Crx from "@/components/Home/Crx"
 	import Recommend from "@/components/Home/Recommend"
+	import ProductDetail from "@/views/ProductDetail"
 	import Bottom from "@/components/Footer"
 	
 	
@@ -44,7 +46,8 @@
 			Purchase,			
 			EastHome,
 			Crx,
-			Recommend
+			Recommend,
+			ProductDetail
 		}
 	}
 </script>
