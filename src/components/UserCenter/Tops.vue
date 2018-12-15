@@ -3,7 +3,7 @@
 	<div class="top-bar">
 		<div class="go-back">
 			<a href="#" @click.prevent="goBack">
-				＜
+				<i class="fa  fa-angle-left"></i>
 			</a>
 		</div>
 		<div class="slot">

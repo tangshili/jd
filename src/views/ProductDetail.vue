@@ -4,7 +4,7 @@
 		<top-bar>
 			<tab></tab>
 		</top-bar>
-		<div class="banner" style="margin-top: 50px;">
+		<div class="banners" style="margin-top: 50px;">
 			<product-swiper></product-swiper>
 		</div>
 		<product-info></product-info>
@@ -12,6 +12,9 @@
 		<suit></suit>
 		<committed-to></committed-to>
 		<shop></shop>
+		<like></like>
+		<introduction></introduction>
+		<!--<below></below>-->
 	</div>
 
 </template>
@@ -25,6 +28,9 @@
 	import Suit from "@/components/ProductDetail/Suit"
 	import CommittedTo from "@/components/ProductDetail/CommittedTo"
 	import Shop from "@/components/ProductDetail/Shop"
+	import Like from "@/components/ProductDetail/Like"
+	import Introduction from "@/components/ProductDetail/Introduction"
+//	import Below from "@/components/ProductDetail/Below"
 	
 	export default {
 		data() {
@@ -40,7 +46,10 @@
 			ProductSwiper,
 			Suit,
 			CommittedTo,
-			Shop
+			Shop,
+			Like,
+			Introduction
+//			Below
 		}
 	}
 </script>
@@ -48,7 +57,7 @@
 <style>
 	@import url("../assets/css/swiper.css");
 	@import url("../assets/css/weui.css");
-	.banner {
+	.banners {
 		width: 100%;
 	}
 	

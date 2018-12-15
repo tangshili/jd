@@ -5,7 +5,7 @@
 				<img src="../../assets/images/shop.png" />
 			</div>
 			<div class="shop-top-right left" style="flex: 3;">
-				<p>芷芷堂美妆专营店</p>
+				<div class="shop-title">芷芷堂美妆专营店</div>
 				<span>400-610-1360转118072</span>
 			</div>
 		</div>
@@ -65,6 +65,7 @@
 	.shop {
 		margin-top: 10px;
 		width: 100%;
+		border-bottom: 5px solid #E8E8ED;
 	}
 	
 	.shop .shop-top {
@@ -89,7 +90,7 @@
 		margin-left: 10px;
 	}
 	
-	.shop .shop-top-right p {
+	.shop .shop-top-right .shop-title {
 		font-size: 14px;
 		line-height: 14px;
 		

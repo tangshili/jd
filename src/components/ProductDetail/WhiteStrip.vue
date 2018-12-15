@@ -8,10 +8,10 @@
 		<div class="slot">
 			<slot></slot>
 		</div>
-		<div class="menu">
+		<div class="strip">
 			<a class="shows" href="#" @click.prevent="menuShow=true"><i>···</i></a>
 		</div>
-		<ul class="menu-list" v-show="menuShow">
+		<ul class="strip-list" v-show="menuShow">
 			<div class="title" v-show="menuShow" @click="menuShow=false;">
 				<h6>打白条购买</h6><img class="close" src="../../assets/images/close.png" /></div>
 			<!--<li>-->
@@ -81,7 +81,7 @@
 		width: 60%;
 	}
 	
-	.white-strip .menu {
+	.white-strip .strip {
 		width: 40px;
 		height: 44px;
 		font-size: 22px;
@@ -89,7 +89,7 @@
 		position: relative;
 	}
 	
-	.menu-list {
+	.strip-list {
 		position: fixed;
 		z-index: 9999;
 		width: 100%;
@@ -103,7 +103,7 @@
 		/*background: rgba(0, 0, 0, .9);*/
 	}
 	
-	.menu-list h6 {
+	.strip-listsize h6 {
 		font-size: 14px;
 		line-height: 40px;
 		background-color: #f3f2f8;
@@ -112,7 +112,7 @@
 		margin-bottom: 10px;
 	}
 	
-	.menu-list h5 {
+	.strip-list h5 {
 		font-size: 16px;
 		text-align: center;
 		line-height: 50px;
@@ -123,17 +123,17 @@
 		margin-top: 10px;
 	}
 	
-	.menu-list p {
+	.strip-list p {
 		font-size: 14px;
 		margin-bottom: 2px;
 		margin-left: 13px;
 	}
 	
-	.menu-list p span {
+	.strip-list p span {
 		font-size: 14px;
 	}
 	
-	.menu-list a {
+	.strip-list a {
 		color: #333333;
 		text-decoration: none;
 		line-height: 18px;
@@ -141,13 +141,13 @@
 		display: inline-block;
 	}
 	
-	.menu-list li {
+	.strip-list li {
 		padding-top: 8px;
 		margin-left: 40px;
 		list-style-type: disc;
 	}
 	
-	.menu-list span {
+	.strip-list span {
 		font-size: 12px;
 		left: -40px;
 		color: #cccccc;
@@ -180,21 +180,21 @@
 		color: #ccc;
 	}
 	
-	#app .menu-list .title {
+	.strip-list .title {
 		background-color: #f3f2f8;
 		height: 40px;
 		width: 100%;
 		margin-bottom: 10px;
 	}
 	
-	#app .menu-list .title h6 {
+	.strip-list .title h6 {
 		font-size: 14px;
 		line-height: 40px;
 		padding-left: 13px;
 		float: left;
 	}
 	
-	#app .menu-list .title .close {
+	.strip-list .title .close {
 		width: 20px;
 		height: 20px;
 		padding-top: 10px;

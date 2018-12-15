@@ -1,6 +1,6 @@
 <template>
 	<div class="crx">
-		<p>——————⊰&nbsp;&nbsp;为您推荐&nbsp;&nbsp;⊰——————</p>
+		<div class="crx-title">——————⊰&nbsp;&nbsp;为您推荐&nbsp;&nbsp;⊰——————</div>
 	</div>
 </template>
 
@@ -13,14 +13,9 @@
 		height:40px;
 		background-color: #ddd;
 		text-align: center;
-		font-size: 14px;
+		font-size: 16px;
 		line-height: 40px;	
 		box-sizing: border-box;
 	}
-	.crx p {
-		height:40px;
-		line-height: 40px;
-		padding-top:15px;
-		box-sizing: border-box;				
-	}
+	.crx .crx-title {}
 </style>
