@@ -14,7 +14,7 @@
 		<shop></shop>
 		<like></like>
 		<introduction></introduction>
-		<!--<below></below>-->
+		<below></below>
 	</div>
 
 </template>
@@ -30,7 +30,7 @@
 	import Shop from "@/components/ProductDetail/Shop"
 	import Like from "@/components/ProductDetail/Like"
 	import Introduction from "@/components/ProductDetail/Introduction"
-//	import Below from "@/components/ProductDetail/Below"
+	import Below from "@/components/ProductDetail/Below"
 	
 	export default {
 		data() {
@@ -48,8 +48,8 @@
 			CommittedTo,
 			Shop,
 			Like,
-			Introduction
-//			Below
+			Introduction,
+			Below
 		}
 	}
 </script>

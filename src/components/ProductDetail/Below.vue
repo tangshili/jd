@@ -18,10 +18,10 @@
 </script>
 
 <style>
-	* {
+	/** {
 		margin: 0px;
 		height: 0px;
-	}
+	}*/
 	
 	.below {
 		width: 100%;
@@ -30,6 +30,7 @@
 		bottom: 0px;
 		left: 0px;
 		border-top:1px solid #ccc;
+		background-color:white;
 	}
 	
 	.below>div {

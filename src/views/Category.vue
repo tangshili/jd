@@ -1,8 +1,8 @@
 <template>
 
 	<div class="category-page">
-		<h1>分类</h1>
-		<input type="text" name="" id="" value="" @focus="show=true" />
+		<search-bar></search-bar>
+		<category></category>
 		
 		<search-page v-model="show"></search-page>
 		<bottom></bottom>
@@ -12,6 +12,8 @@
 <script>
 	import Bottom from "@/components/Footer"
 	import SearchPage from "@/components/SearchPage"
+	import Category from "@/components/Category/CategoryInner"
+	import SearchBar from "@/components/SearchBar"
 	export default {
 		data(){
 			return {
@@ -25,11 +27,15 @@
 		},
 		components: {
 			SearchPage,
-			Bottom
+			Bottom,
+			Category,
+			SearchBar
 		}
 	}
 </script>
 
 <style>
-
+.category-page .search-bar{
+	    background-color: #e43130;
+}
 </style>
