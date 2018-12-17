@@ -128,6 +128,7 @@
 		box-sizing: border-box;
 		height: 100%;
 		position: relative;
+		background-color:white;
 	}
 	
 	.pagination-aside {
@@ -137,8 +138,9 @@
 		width: 86px;
 		min-height: 100%;
 		float: left;
-		background-color: #F8F8F8;
+		background-color: white;
 		overflow: hidden;
+		
 	}
 	
 	.pagination-aside ul {

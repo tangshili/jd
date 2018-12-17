@@ -7,7 +7,7 @@
 			<div class="filter" style="flex: 1;">筛选<span>※</span></div>
 		</div>
 		<div class="search-title2 weui-flex">
-			<div class="highest-price" style="flex: 1; margin-right:10px;">迪奥（dior）</div>
+			<div class="highest-price" style="flex: 1; margin-right:10px;">迪奥</div>
 			<div class="sales-volume" style="flex: 1; margin-right:10px;">混合香调</div>
 				<div class="in-stock " style="flex: 1; margin-right:10px;">适用性别</div>
 			<div class="filter" style="flex: 1;">净含量</div>
@@ -172,6 +172,7 @@
 <style>
 	.search-list {
 		width: 100%;
+		background-color:white;
 	}
 	
 	.search-title1 {
