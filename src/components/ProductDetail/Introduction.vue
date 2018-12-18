@@ -1,6 +1,6 @@
 <template>
 	<div class="introduction">
-		<div id="top"></div>
+		<div id="introduction-top"></div>
 		<div class="introduction-title weui-flex">
 			<div class="introduction-text" style="flex: 1; border-right:1px solid #E3E3E3;">
 				<span class="introduction-span">商品介绍</span>
@@ -41,7 +41,7 @@
 			<img src="../../assets/images/logo.png" />
 		</div>
 		<div class="to-top">
-			<a href="#top">返回<br/>顶部</a>
+			<a href="#introduction-top">返回<br/>顶部</a>
 		</div>
 	</div>
 </template>
@@ -97,10 +97,13 @@
 		width: 100%;
 		height: 100px;
 		text-align: center;
+		padding-bottom: 100px;
+		background-color:white;
 	}
 	
 	.jd-logo .logo-text {
-		font-size: 10px;
+		font-size: 12px;
+		padding-top:10px;
 	}
 	
 	.jd-logo img {
@@ -110,7 +113,7 @@
 	
 	.to-top {
 		position: fixed;
-		bottom: 0px;
+		bottom: 50px;
 		right: 0px;
 		padding: 3px 6px;
 		background-color: #2C0009;
@@ -121,4 +124,9 @@
 	.to-top a {
 		color: white;
 	}
+	/*#introduction-top{
+		position:fixed;
+		top:0px;
+		left:0px;
+	}*/
 </style>

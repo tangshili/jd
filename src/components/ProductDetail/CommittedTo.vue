@@ -51,8 +51,8 @@
 				<span>签收60天内，使用出现过敏问题，商家48小时内处理，提供售后保障。</span>
 			</li>
 			<h5>确定</h5>
-			<!--<div class="header-mask" v-show="menuShow" @click="menuShow=false;"></div>-->
 		</ul>
+		<div class="header-mask" v-show="menuShow" @click="menuShow=false;"></div>
 
 		
 	</div>
@@ -188,14 +188,15 @@
 		line-height: 24px;
 	}
 	
-	/*.committted .menu-list .header-mask {
+	.committted .header-mask {
 		position: fixed;
 		top: 0px;
 		bottom: 0px;
 		left: 0px;
 		right: 0px;
 		z-index: 9998;
-	}*/
+		background-color: rgba(0,0,0,0.5);
+	}
 	
 	.committted .go-back p {
 		font-size: 12px;

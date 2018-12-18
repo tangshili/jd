@@ -162,7 +162,7 @@
 		left: 0px;
 		right: 0px;
 		z-index: 9998;
-		/*background-color: rgba(0,0,255,0.3);*/
+		background-color: rgba(0,0,0,0.5);
 	}
 	
 	.white-strip .go-back p {

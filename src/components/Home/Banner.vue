@@ -23,7 +23,7 @@
 				spaceBetween: 0,
 //				centeredSlides: true,
 				autoplay: {
-					delay: 2500,
+					delay: 1500,
 					disableOnInteraction: false,
 				},
 				pagination: {
@@ -49,8 +49,8 @@
 	height:70px;
 	overflow:hidden;
 	position:absolute;
-	top:25px;
-	left:45px;
+	top:35px;
+	left:60px;
 }
 
 #ad-swiper .swiper-wrapper{
@@ -63,6 +63,6 @@
 }
 #ad-swiper img{
 	width:70px;
-	height:70px;
+	height:70px;	
 }
 </style>

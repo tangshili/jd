@@ -169,7 +169,7 @@
 	}
 	
 	.suit .menu-list h4 {
-		font-size: 10px;
+		font-size: 12px;
 		margin-bottom: 8px;
 		margin-left: 13px;
 		color: #ccc;
@@ -206,7 +206,7 @@
 		font-size: 14px;
 	}
 	
-	.suit .menu-list .spans span:active {
+	.suit .menu-list .spans span:hover {
 		background-color: #FF0000;
 		color: white;
 	}
@@ -218,7 +218,7 @@
 		left: 0px;
 		right: 0px;
 		z-index: 9998;
-		/*background-color: rgba(0,0,255,0.3);*/
+		background-color: rgba(0,0,0,0.5);
 	}
 	
 	.suit .go-back p {
@@ -275,7 +275,7 @@
 		font-size: 12px;
 		color: #333;
 		line-height: 1.4em;
-		padding: 0px 10px 10px 80px;
+		padding: 0px 10px 10px 100px;
 	}
 	
 	.menu-list .suit-title .prop b {

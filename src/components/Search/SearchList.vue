@@ -20,8 +20,8 @@
 				<div class="search-prolist-title"><img src="../../assets/images/global.png" style="width:48px; height:16px;" />迪奥（Dior） 【法国进口】Dior迪奥女士香水花漾甜心小姐 真我女士香水 魅惑女士香水 花漾50ml+真我50ml+魅惑50ml</div>
 				<span class="word">混合香调</span>
 				<span class="word">女士</span><br />
-				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1599</span>.00</span>
-				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-top:10px;" />
+				<span style="font-size:10px; color:#e93b3d; " >¥ <span class="int" style="font-size:16px;">1599</span>.00</span>
+				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-left:5px;" />
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -33,7 +33,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">女士</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1399</span>.00</span>
-				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d">券399-30</span>
+				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d; margin-left:5px;">券399-30</span>
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -46,7 +46,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">约会</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1399</span>.00</span>
-				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d">商家免邮</span>
+				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d; margin-left:5px;">商家免邮</span>
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -60,7 +60,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">约会</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1359</span>.00</span>
-				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d">券399-30</span>
+				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d; margin-left:5px;">券399-30</span>
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -85,7 +85,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">女士</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1599</span>.00</span>
-				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-top:10px;" />
+				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-left:5px;" />
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -110,7 +110,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">约会</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1220</span>.00</span>
-				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d">满999-100</span>
+				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d; margin-left:5px;">满999-100</span>
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -122,7 +122,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">女士</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1112</span>.00</span>
-				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-top:10px;" />
+				<img src="../../assets/images/gift.png" style="width:14px;height:14px; margin-left:5px;" />
 			</div>
 		</div>
 		<div class="search-prolist weui-flex">
@@ -147,7 +147,7 @@
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1120</span>.00</span>
 			</div>
 		</div>
-		<div class="search-prolist weui-flex">
+		<div class="search-prolist weui-flex" style="margin-bottom: 50px;">
 			<div class="perfume-img" style="flex: 1; padding-right:10px;">
 				<img src="../../assets/images/perfume-12.png" />
 			</div>
@@ -158,7 +158,7 @@
 				<span class="word">混合香调</span>
 				<span class="word">约会</span><br />
 				<span style="font-size:10px; color:#e93b3d;">¥ <span class="int" style="font-size:16px;">1079</span>.00</span>
-				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d">满999-100</span>
+				<span style="font-size:10px;border:1px solid #e93b3d; padding:1px 5px; color:#e93b3d;margin-left:5px;">满999-100</span>
 			</div>
 		</div>
 	</div>
@@ -228,21 +228,27 @@
 		/*height: 38px;*/
 		font-size: 14px;
 		white-space: normal;
+		line-height: 20px;
 	}
 	
 	.search-prolist-info .word {
-		float: left;
-		margin: 8px 10px 0px 0px;
+		/*float: left;*/
+		margin: 8px 10px 10px 0px;
 		padding: 0 5px;
 		border-radius: 1px;
 		font-size: 10px;
 		height: 15px;
 		line-height: 15px;
 		color: #999;
-		background-color: #f2f2f7;
+		background-color:#f2f2f7;
+		display:inline-block;
+		
 	}
 	
 	.search-prolist-info {
 		border-bottom: 1px solid #F6F6F6;
+	}
+	.int{
+		margin-top:10px;
 	}
 </style>
