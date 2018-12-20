@@ -34,16 +34,34 @@
 					icon: 'fa-shopping-cart',
 					to: '/cart',
 				}, {
-					title: '我的',
+					title: '未登录',
 					icon: 'fa-user',
 					to: '/user',
 				}]
 			}
+		},
+		computed: {
+			login() {
+				return this.$store.state.login;
+			}
+		},
+		watch: {
+			login: (val) => {
+				if(val) {
+					this.nav[4].title = '我的';
+				}
+			}
+		},
+		created() {
+			if(this.login) {
+				this.nav[4].title = '我的';
+			}
+			console.log(this.login);
 		}
 	}
 </script>
 
-<style >
+<style>
 	footer {
 		width: 100%;
 		height: 50px;
@@ -87,6 +105,6 @@
 	footer ul li .title {
 		display: block;
 		font-size: 12px;
-		background-color:#fff;
+		background-color: #fff;
 	}
 </style>

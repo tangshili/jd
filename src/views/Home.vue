@@ -11,7 +11,7 @@
 		<east-home></east-home>
 		<crx></crx>
 		<Recommend></Recommend>
-		<productdetail></productdetail>
+		<!--<productdetail></productdetail>-->
 		<bottom></bottom>
 	</div>
 </template>

@@ -17,16 +17,18 @@
 	import Recommend from "@/components/ProductList"
 	export default {
 		name: 'cart',
-	data() {
-		return {
-			
-		};
-	},
+		data() {
+			return {
+
+			};
+		},
 		methods: {
-			
+
 		},
 		computed: {
-			
+			login(){
+				return this.$store.state.login;
+			}
 		},
 		components: {
 			TopBar,
@@ -34,10 +36,14 @@
 			Foots,
 			Crx,
 			Recommend
+		},created(){
+			if(!this.login){
+				this.$router.push("/login");
+			}
 		}
 	}
 </script>
 
 <style>
-	
+
 </style>

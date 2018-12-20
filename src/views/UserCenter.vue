@@ -39,6 +39,15 @@
 			UserTools,
 			Crx,
 			Recommend
+		},
+		computed: {
+			login(){
+				return this.$store.state.login;
+			}
+		},created(){
+			if(!this.login){
+				this.$router.push("/login");
+			}
 		}
 	}
 </script>

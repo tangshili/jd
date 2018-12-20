@@ -10,11 +10,12 @@ import User from './views/UserCenter.vue'
 import Category from './views/Category.vue'
 import Search from './views/Search.vue'
 import Product from './views/ProductDetail.vue'
+import Login from './views/Login.vue'
 import Goods from './components/Goods.vue'
 import Comment from './components/Comment.vue'
 import Detail from './components/Detail.vue'
 import Recommend from './components/Recommend.vue'
-import ProductDetail from './views/ProductDetail.vue'
+//import ProductDetail from './views/ProductDetail.vue'
 import Bt from "./views/Bt"
 import Admin from "./views/Admin"
 import AdminContent from './components/AdminContent.vue'
@@ -51,10 +52,18 @@ export default new Router({
 		name: 'product',
 		component: Product
 	}, {
+		path: '/login',
+		name: 'login',
+		component: Login
+	},{
 		path: '/bt',
 		name: 'bootstrap',
 		component: Bt
-	}, {
+	}]
+});
+
+/**
+ * , {
 		path: '/admin',
 		name: 'admin',
 		component: Admin,
@@ -66,5 +75,7 @@ export default new Router({
 				aside:AdminAside
 			}
 		}]
-	}]
-});
+	}
+ *
+ *
+ */
