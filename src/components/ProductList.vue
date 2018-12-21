@@ -1,6 +1,6 @@
 <template>
 	<div class="product-list clear">
-		
+
 		<div class='product' v-for="(item,index) in products">
 			<a :href='item.id'>
 				<div class='product-image'>
@@ -18,14 +18,15 @@
 			<div class="load-logo-text">
 				（ 查看电脑版商品详情，可能会消耗较多流量 ）
 			</div>
-			<img src="../assets/images/logo.png" /></div>
+			<img src="../assets/images/logo.png" />
+		</div>
 	</div>
 </template>
 
 <script>
 	export default {
 		data() {
-			return {				
+			return {
 				products: [{
 					title: '【两瓶45元 买二送二】男士香水 持久淡香清新古龙香水男 非费洛蒙香水50ml ',
 					image: '/images/01.png',
@@ -57,20 +58,19 @@
 					price: 358,
 					id: 2
 				}]
-			
+
 			};
 		}
 	}
 </script>
 
 <style>
-	
-	.product-list{
-		background-color:#ccc;
+	.product-list {
+		background-color: #ccc;
 		/*margin-top: 20px;*/
-		margin-bottom:80px;
-		
+		margin-bottom: 80px;
 	}
+	
 	img {
 		border: 0 none;
 		vertical-align: top;
@@ -144,23 +144,24 @@
 	.similar-info {
 		height: 26px;
 	}
-	.load-logo-text{
-		font-size:14px;
-		padding-top:10px;
+	
+	.load-logo-text {
+		font-size: 14px;
+		padding-top: 10px;
 		margin-bottom: 30px;
 	}
-	.product-list .load-logo{
-		width:100%;
-		height:100px;
+	
+	.product-list .load-logo {
+		width: 100%;
+		height: 100px;
 		text-align: center;
-		float:left;
-		background-color:white;
-		padding-bottom:50px;
-		
-	}
-	.product-list .load-logo img{
-		width:100px;
-		/*height:100px;*/
+		float: left;
+		background-color: white;
+		padding-bottom: 50px;
 	}
 	
+	.product-list .load-logo img {
+		width: 100px;
+		/*height:100px;*/
+	}
 </style>

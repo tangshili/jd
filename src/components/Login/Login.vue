@@ -5,13 +5,13 @@
 			<div class="jd-login">京东登录</div>
 		</header>
 		<div class="input-container-text">
-			<input type="text" name="text" value="" placeholder="用户名/邮箱/已验证手机" />
+			<input type="text" name="text" v-model="name" placeholder="用户名/邮箱/已验证手机" />
 		</div>
 		<div class="input-container-pass weui-flex">
-			<input style="flex:3;" type="password" name="password" value="" placeholder="请输入密码" />
+			<input style="flex:3;" type="password" v-model="pwd" placeholder="请输入密码" />
 			<div class="forget-password" style="flex: 1;">忘记密码</div>
 		</div>
-		<div class="loginBtn"  @click="login">
+		<div class="loginBtn" :class="{'btn-active':loginEnable}" @click.prevent="login">
 			<a href="#">登 录</a>
 		</div>
 		<div class="quick-nav">
@@ -38,24 +38,57 @@
 				</p>
 			</div>
 		</div>
+		<!--<div id="loadingToast" :class="{'toast-hidden':!loading}">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-loading weui-icon_toast"></i>
+				<p class="weui-toast__content">登录中</p>
+			</div>
+		</div>
+
+		<div id="toast" class="toast-hidden">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-icon-success-no-circle weui-icon_toast"></i>
+				<p class="weui-toast__content">已完成</p>
+			</div>
+		</div>-->
 	</div>
 </template>
 
 <script>
+	import axios from "axios";
+	import qs from "qs";
 	export default {
 		data() {
 			return {
-				isFixed: false
+				loginUrl: "http://api.niyinlong.com/index.php/api/index/login",
+				name: '',
+				pwd: '',
+//				isFixed: false
 			};
 		},
+		props:{},
 		methods: {
 			goBack() {
 				this.$router.go(-1);
 			},
 			login() {
+				if(this.loginEnable){
+					this.loading=true;
+				}
 				console.log('login')
 				this.$store.commit('login', true);
 				this.$router.push('/');
+			}
+		},
+		computed: {
+			loginEnable() {
+				if(this.name.length > 5 && this.pwd.length > 5) {
+					return true;
+				} else {
+					return false;
+				}
 			}
 		}
 	}
@@ -179,6 +212,7 @@
 	
 	.quick-nav a {
 		color: #7D7D7D;
+		font-size:12px;
 	}
 	
 	.login-type {
@@ -248,5 +282,9 @@
 	.quick-login .other .other-qq img {
 		width: 60px;
 		height: 60px;
+	}
+	
+	.btn-active {
+		background-image: linear-gradient(90deg, #f10000, #ff2000 73%, #ff4f18);
 	}
 </style>

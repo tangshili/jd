@@ -14,7 +14,12 @@
 				<div class='similar-info'></div>
 			</a>
 		</div>
-		<div class="load"><img src="../../assets/images/load2.gif" /></div>
+		<div class="recommend-logo">
+			<div class="recommend-logo-text">
+				（ 查看电脑版商品详情，可能会消耗较多流量 ）
+			</div>
+			<img src="../../assets/images/logo.png" />
+		</div>
 	</div>
 </template>
 
@@ -158,16 +163,20 @@
 		height: 26px;
 	}
 	
-	.product-list .load {
+	.recommend-logo {
 		width: 100%;
 		height: 100px;
 		text-align: center;
 		float: left;
 		background-color: white;
+		padding-bottom: 30px;
 	}
-	
-	.product-list .load img {
+	.recommend-logo-text{
+		font-size:12px;
+		padding:10px 0px 30px;
+	}
+	.recommend-logo img {
 		width: 100px;
-		height: 100px;
+		/*height:100px;*/
 	}
 </style>

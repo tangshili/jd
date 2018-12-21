@@ -28,5 +28,6 @@
 	@import url("../assets/css/font-awesome.min.css" );
 	.login{
 		height:100%;
+		background-color:#fff;
 	}
 </style>

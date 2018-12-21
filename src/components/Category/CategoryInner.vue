@@ -120,6 +120,7 @@
 </template>
 
 <script>
+	
 </script>
 
 <style>
@@ -128,7 +129,7 @@
 		box-sizing: border-box;
 		height: 100%;
 		position: relative;
-		background-color:white;
+		background-color: white;
 	}
 	
 	.pagination-aside {
@@ -140,7 +141,7 @@
 		float: left;
 		background-color: white;
 		overflow: hidden;
-		
+		overflow-y: auto;
 	}
 	
 	.pagination-aside ul {
@@ -157,14 +158,11 @@
 	}
 	
 	.pagination-aside ul li:hover {
-		cursor: pointer;
-	}
-	
-	.pagination-aside ul li:hover {
 		color: red;
 		width: 86px;
 		height: 46px;
 		background-color: white;
+		cursor: pointer;
 	}
 	
 	.pagination-main {
@@ -193,7 +191,7 @@
 	}
 	
 	.pagination-main .swiper-container img {
-		width: 100%;
+		width: 100%;		
 	}
 	
 	.pagination-main .list-hot {
@@ -233,12 +231,14 @@
 	.pagination-main-ul li img {
 		width: 100px;
 		height: 100px;
+		margin-bottom: 5px;
 	}
 	
 	.pagination-main-ul li a {
 		display: block;
 		color: #333;
 		text-align: center;
+		font-size:12px;
 	}
 	
 	.category-img {
@@ -251,63 +251,64 @@
 		width: 100%;
 		height: 100%;
 	}
-	
-	
 	/*/头部/*/
-.categorys .top {
-	width: 100%;
-	height: 45px;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	z-index: 9999;
-	border-bottom:1px solid #ccc;
-	background-color:white;
-}
-.categorys .search{
-	text-align: center;
-	width:100%;
-}
-.categorys .search .kuohao{
-	width:24px;
-	height:24px;
-	position:absolute;
-	top:10px;
-	left:10px;
-}
-
-.categorys .search input{
-	width:300px;
-	height:24px;
-	background-color:#ddd;
-	border-radius:12px;
-	border:0px;
-	margin-top:10px;
-	padding-left:32px;
-	z-index: -1;
-	margin-right:20px;
-	position:relative;
-	left:2px;
 	
-}
-.categorys .search i{
-	position:absolute;
-	top:15px;
-	left:46px;
-}
-
-.categorys .search  a{
-	color:white;
-	width:36px;
-	height:24px;
-	background-color:#E93B3D;
-	display:inline-block;
-	border-radius:5px;
-	text-align: center;
-	line-height:24px;
-	font-size:14px;
-	position: absolute;
-    top: 10px;
-    right: 10px;
-}
+	.categorys .top {
+		width: 100%;
+		height: 45px;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		z-index: 9999;
+		border-bottom: 1px solid #ccc;
+		background-color: white;
+	}
+	
+	.categorys .search {
+		text-align: center;
+		width: 100%;
+	}
+	
+	.categorys .search .kuohao {
+		width: 24px;
+		height: 24px;
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	}
+	
+	.categorys .search input {
+		width: 300px;
+		height: 24px;
+		background-color: #ddd;
+		border-radius: 12px;
+		border: 0px;
+		margin-top: 10px;
+		padding-left: 32px;
+		z-index: -1;
+		margin-right: 20px;
+		position: relative;
+		left: 2px;
+	}
+	
+	.categorys .search i {
+		position: absolute;
+		top: 15px;
+		left: 46px;
+	}
+	
+	.categorys .search a {
+		color: white;
+		width: 36px;
+		height: 24px;
+		background-color: #E93B3D;
+		display: inline-block;
+		border-radius: 5px;
+		text-align: center;
+		line-height: 24px;
+		font-size: 14px;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
 </style>

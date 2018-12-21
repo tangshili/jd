@@ -41,7 +41,7 @@
 	.below i.fa {
 		display: block;
 		font-size: 24px;
-		padding: 5px 0px;
+		padding: 5px 0px 10px;
 		height: 12px;
 	}
 	
