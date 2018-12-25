@@ -1,314 +1,499 @@
 <template>
-	<div class="categorys">
-		<div class="pagination">
-			<div class="pagination-aside clear">
-				<ul>
-					<li class="red">热门推荐</li>
-					<li>手机数码</li>
-					<li>家用电器</li>
-					<li>电脑办公</li>
-					<li>计生情趣</li>
-					<li>美妆护肤</li>
-					<li>个护清洁</li>
-					<li>汽车用品</li>
-					<li>京东超市</li>
-					<li>男装</li>
-					<li>男鞋</li>
-					<li>女装</li>
-					<li>女鞋</li>
-					<li>母婴童装</li>
-					<li>图书音像</li>
-					<li>运动户外</li>
-					<li>内衣配饰</li>
-					<li>内衣配饰</li>
-					<li>食品生鲜</li>
-					<li>酒水饮料</li>
-					<li>家具家装</li>
-					<li>家居厨具</li>
-					<li>箱包手袋</li>
-					<li>钟表珠宝</li>
-					<li>玩具乐器</li>
-					<li>医药保健</li>
-					<li>宠物生活</li>
-					<li>礼品鲜花</li>
-					<li>农资绿植</li>
-					<li>生活旅行</li>
-					<li>奢侈品</li>
-					<li>全球购</li>
-					<li>艺术邮币</li>
-					<li>二手商品</li>
-					<li>特产馆</li>
-					<li>京东金融</li>
-					<li>国际名牌</li>
-					<li>拍卖</li>
-					<li>房产</li>
 
+	<div class="category-page">
+		<search-bar></search-bar>
+
+		<div class="container weui-flex">
+
+			<div class="aside" ref="aside" @touchstart="asideTouchStart" @touchmove="asideTouchMove" @touchend="asideTouchEnd">
+
+				<ul ref="aside-ul" :style="{top:asideTop+'px'}" :class="{transition:transition}">
+					<li :class="{active:navIndex==index}" v-for="(item,index) in nav" v-text="item.title" @click="navIndex=index;getContentList(item.id);"> </li>
 				</ul>
+
 			</div>
-			<div class="pagination-main">
-				<div class="category-img">
-					<img src="../../assets/images/f-banner1.png" />
+
+			<div class="content weui-flex__item"  ref="content" @touchstart="contentTouchStart" @touchmove="contentTouchMove" @touchend="contentTouchEnd">
+
+				<div class="category-list"  ref="category-list" :style="{top:contentTop+'px'}">
+
+					<div class="category-image">
+						<img :src="products.image">
+					</div>
+
+					<div class="category-jd" v-for="(row,i) in products.category">
+
+						<div class="title" v-text="row.title"></div>
+						<ul class="clear">
+							<li class="prodcut left" v-for="(col,j) in row.list">
+								<img :src="col.image">
+								<div class="product-name" v-text="col.name"></div>
+							</li>
+						</ul>
+
+					</div>
+
 				</div>
-				<div class="list-hot ">
-					<h4>热门分类</h4><small><img src="../../assets/images/xiaotubiao.png"  />排行榜&nbsp;></small>
-				</div>
-				<ul class="pagination-main-ul">
-					<li>
-						<img src="../../assets/images/f-1.jpg" />
-						<a href="#">手机</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-2.jpg" />
-						<a href="#">耳机</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-3.png" />
-						<a href="#">剃须刀</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-4.png" />
-						<a href="#">路由</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-5.png" />
-						<a href="#">华为</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-6.png" />
-						<a href="#">袜子</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-7.jpg" />
-						<a href="#">短裤</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-8.png" />
-						<a href="#">吹风机</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-9.png" />
-						<a href="#">洗衣液</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-10.png" />
-						<a href="#">鼠标</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-11.png" />
-						<a href="#">秋衣</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-12.png" />
-						<a href="#">oppo</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-13.png" />
-						<a href="#">充电宝</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-14.png" />
-						<a href="#">U盘</a>
-					</li>
-					<li>
-						<img src="../../assets/images/f-15.jpg" />
-						<a href="#">牛奶</a>
-					</li>
-				</ul>
+
 			</div>
+
 		</div>
+
+		<bottom></bottom>
 	</div>
 </template>
 
 <script>
-	
+	import SearchBar from "@/components/SearchBar"
+	import Bottom from "@/components/Footer"
+	export default {
+		data() {
+			return {
+				nav: [{
+					id: 1,
+					'title': '热门推荐'
+				}, {
+					id: 1,
+					'title': '手机数码'
+				}, {
+					id: 1,
+					'title': '家用电器'
+				}, {
+					id: 1,
+					'title': '电脑办公'
+				}, {
+					id: 1,
+					'title': '计生情趣'
+				}, {
+					id: 1,
+					'title': '美妆护肤'
+				}, {
+					id: 1,
+					'title': '个护清洁'
+				}, {
+					id: 1,
+					'title': '汽车用品'
+				}, {
+					id: 1,
+					'title': '京东超市'
+				}, {
+					id: 1,
+					'title': '男装'
+				}, {
+					id: 1,
+					'title': '男鞋'
+				}, {
+					id: 1,
+					'title': '女装'
+				}, {
+					id: 1,
+					'title': '女鞋'
+				}, {
+					id: 1,
+					'title': '母婴童装'
+				}, {
+					id: 1,
+					'title': '图书音像'
+				}, {
+					id: 1,
+					'title': '运动户外'
+				}, {
+					id: 1,
+					'title': '内衣配饰'
+				}, {
+					id: 1,
+					'title': '食品生鲜'
+				}, {
+					id: 1,
+					'title': '酒水饮料'
+				}, {
+					id: 1,
+					'title': '家具家装'
+				}, {
+					id: 1,
+					'title': '家居厨具'
+				}, {
+					id: 1,
+					'title': '箱包手袋'
+				}, {
+					id: 1,
+					'title': '钟表珠宝'
+				}, {
+					id: 1,
+					'title': '玩具乐器'
+				}],
+				navIndex: 0,
+				asideTop: 0,
+				asideTopTmp: 0,
+				asideStartY: 0,
+				minTop: 0,
+				transition: false,
+
+				category: [{
+					image: require('../../assets/images/xinrenlibao.png'),
+					category: [{
+						title: '热门分类',
+						list: [{
+							image: require('../../assets/images/phone-1.jpg'),
+							name: '老人机'
+						}, {
+							image: require('../../assets/images/phone-2.jpg'),
+							name: '手机'
+						}, {
+							image: require('../../assets/images/phone-3.jpg'),
+							name: '全面屏手机'
+						}, {
+							image: require('../../assets/images/phone-4.jpg'),
+							name: '游戏手机'
+						}, {
+							image: require('../../assets/images/phone-5.jpg'),
+							name: '拍照手机'
+						}, {
+							image: require('../../assets/images/phone-6.jpg'),
+							name: '对讲机'
+						}, {
+							image: require('../../assets/images/phone-7.jpg'),
+							name: '京东回收'
+						}, {
+							image: require('../../assets/images/phone-8.jpg'),
+							name: '女性手机'
+						}, {
+							image: require('../../assets/images/phone-9.jpg'),
+							name: '京东维修'
+						}, {
+							image: require('../../assets/images/phone-10.jpg'),
+							name: '合约手机'
+						}, {
+							image: require('../../assets/images/phone-11.jpg'),
+							name: '选号卡'
+						}, {
+							image: require('../../assets/images/phone-12.jpg'),
+							name: '办套餐'
+						}]
+					}, {
+						title: '家电搜索',
+						list: [{
+							image: require('../../assets/images/appliance-1.jpg'),
+							name: '电压力锅'
+						}, {
+							image: require('../../assets/images/appliance-2.jpg'),
+							name: '电饭煲'
+						}, {
+							image: require('../../assets/images/appliance-3.jpg'),
+							name: '电磁炉'
+						}, {
+							image: require('../../assets/images/appliance-4.jpg'),
+							name: '微波炉'
+						}, {
+							image: require('../../assets/images/appliance-5.jpg'),
+							name: '电饼铛'
+						}, {
+							image: require('../../assets/images/appliance-6.jpg'),
+							name: '豆浆机'
+						}, {
+							image: require('../../assets/images/appliance-7.jpg'),
+							name: '多用途锅'
+						}, {
+							image: require('../../assets/images/appliance-8.jpg'),
+							name: '料理机'
+						}, {
+							image: require('../../assets/images/appliance-9.jpg'),
+							name: '榨汁机'
+						}, {
+							image: require('../../assets/images/appliance-10.jpg'),
+							name: '电烤箱'
+						}, {
+							image: require('../../assets/images/appliance-11.jpg'),
+							name: '茶壶'
+						}, {
+							image: require('../../assets/images/appliance-12.jpg'),
+							name: '电炖锅'
+						}]
+					}]
+				}, {
+					image: require('../../assets/images/xinrenlibao.png'),
+					category: [{
+						title: '美妆',
+						list: [{
+							image: require('../../assets/images/makeups-1.jpg'),
+							name: '明星同款面膜'
+						}, {
+							image: require('../../assets/images/makeups-2.jpg'),
+							name: '显白口红'
+						}, {
+							image: require('../../assets/images/makeups-3.jpg'),
+							name: '小美盒'
+						}, {
+							image: require('../../assets/images/makeups-4.jpg'),
+							name: '新品速递'
+						}, {
+							image: require('../../assets/images/makeups-5.jpg'),
+							name: '精选礼盒'
+						}, {
+							image: require('../../assets/images/makeups-6.jpg'),
+							name: '潮流风尚'
+						}, {
+							image: require('../../assets/images/makeups-7.jpg'),
+							name: '护肤礼盒'
+						}, {
+							image: require('../../assets/images/makeups-8.jpg'),
+							name: '深层清洁'
+						}, {
+							image: require('../../assets/images/makeups-9.jpg'),
+							name: '敏感肌'
+						}, {
+							image: require('../../assets/images/makeups-10.jpg'),
+							name: '卸妆'
+						}, {
+							image: require('../../assets/images/makeups-11.jpg'),
+							name: '洁面'
+						}, {
+							image: require('../../assets/images/makeups-12.jpg'),
+							name: '爽肤水'
+						}]
+					}, {
+						title: '钟表饰品',
+						list: [{
+							image: require('../../assets/images/clock-1.jpg'),
+							name: '瑞表'
+						}, {
+							image: require('../../assets/images/clock-2.jpg'),
+							name: '国表'
+						}, {
+							image: require('../../assets/images/clock-3.jpg'),
+							name: '德表'
+						}, {
+							image: require('../../assets/images/clock-4.jpg'),
+							name: '日韩表'
+						}, {
+							image: require('../../assets/images/clock-5.jpg'),
+							name: '儿童手表'
+						}, {
+							image: require('../../assets/images/clock-6.jpg'),
+							name: '欧美表'
+						}, {
+							image: require('../../assets/images/accessories-1.jpg'),
+							name: '时尚戒指'
+						}, {
+							image: require('../../assets/images/accessories-2.jpg'),
+							name: '耳饰'
+						}, {
+							image: require('../../assets/images/accessories-3.jpg'),
+							name: '项链'
+						}, {
+							image: require('../../assets/images/accessories-4.jpg'),
+							name: 'chocker'
+						}, {
+							image: require('../../assets/images/accessories-5.jpg'),
+							name: '手链'
+						}, {
+							image: require('../../assets/images/accessories-6.jpg'),
+							name: '发饰'
+						}]
+					}]
+				}],
+				products: [],
+				contentTop:0,
+				contentTopTmp: 0,
+				contentStartY: 0,
+				contentMinTop: 0,
+			};
+		},
+		methods: {
+			asideTouchStart(event) {
+				this.transition = false;
+				this.asideStartY = event.changedTouches[0].clientY;
+			},
+			asideTouchMove(event) {
+				var y = event.changedTouches[0].clientY;
+
+				var t = this.asideTopTmp + y - this.asideStartY;
+				// 限定上拉和下拉的阈值;
+				t = t < this.minTop ? this.minTop : t;
+				t = t > 150 ? 150 : t;
+
+				this.asideTop = t;
+			},
+			asideTouchEnd(event) {
+				this.transition = true;
+				this.asideTop = this.asideTop > 0 ? 0 : this.asideTop;
+				this.asideTop = this.asideTop < (this.minTop + 150) ? (this.minTop + 150) : this.asideTop;
+				this.asideTopTmp = this.asideTop;
+			},
+			
+			contentTouchStart(event) {
+//				this.transition = false;
+				this.contentStartY = event.changedTouches[0].clientY;
+			},
+			contentTouchMove(event) {
+				var y = event.changedTouches[0].clientY;
+
+				var t = this.contentTopTmp + y - this.contentStartY;
+				// 限定上拉和下拉的阈值;
+				t = t < this.contentMinTop ? this.contentMinTop : t;
+				t = t > 150 ? 150 : t;
+
+				this.contentTop = t;
+			},
+			contentTouchEnd(event) {
+//				this.transition = true;
+				this.contentTop = this.contentTop > 0 ? 0 : this.contentTop;
+				this.contentTop = this.contentTop < (this.contentMinTop + 150) ? (this.contentMinTop + 150) : this.contentTop;
+				this.contentTopTmp = this.contentTop;
+			},
+			
+			getContentList(id) {
+				this.products = { ...this.category[(Math.random() > 0.5 ? 0 : 1)]
+				};
+				console.log(this.products)
+			}
+		},
+		mounted() {
+			console.log(document.querySelector(".category-page .aside").clientHeight);
+			console.log(document.querySelector(".category-page .aside ul").clientHeight);
+
+			console.log(this.$refs['aside'].clientHeight);
+			console.log(this.$refs['aside-ul'].clientHeight);
+
+			this.minTop = this.$refs['aside'].clientHeight - 150 - this.$refs['aside-ul'].clientHeight;
+
+			console.log(this.minTop);
+			
+			
+			this.contentMinTop = this.$refs['content'].clientHeight - 150 - this.$refs['category-list'].clientHeight;
+		},
+		created() {
+			this.getContentList();
+		},
+		updated(){
+			this.contentMinTop = this.$refs['content'].clientHeight - 150 - this.$refs['category-list'].clientHeight;
+		},
+		components: {
+			Bottom,
+			SearchBar,
+		}
+	}
 </script>
 
 <style>
-	.pagination {
-		padding: 45px 0px 60px;
-		box-sizing: border-box;
+	html,
+	body,
+	#app,
+	.category-page {
 		height: 100%;
-		position: relative;
-		background-color: white;
+		background-color:#ffffff;
 	}
 	
-	.pagination-aside {
-		position: fixed;
-		left: 0;
-		top: 58px;
-		width: 86px;
-		min-height: 100%;
-		float: left;
-		background-color: white;
+	.category-page {}
+	
+	.category-page .search-bar {
+		background-color: #e43130;
+	}
+	
+	.category-page .container {
+		background-color: #FFFFFF;
+		height: 100%;
+		padding: 45px 0px 50px;
+		box-sizing: border-box;
+	}
+	
+	.category-page .aside {
+		height: 100%;
+		width: 85px;
 		overflow: hidden;
-		overflow-y: auto;
+		position: relative;
+		background-color: #f8f8f8;
 	}
 	
-	.pagination-aside ul {
+	.category-page .aside ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
 		width: 100%;
 		position: absolute;
-		top: 0px;
 		left: 0px;
+		top: 0px;
+		/*border-right: solid 1px #CCCCCC;
+		border-top: solid 1px #CCCCCC;*/
+		box-sizing: border-box;
 	}
 	
-	.pagination-aside ul li {
-		font-size: 14px;
+	.transition {
+		-webkit-transition: top 0.3s linear;
+		transition: top 0.3s linear;
+	}
+	
+	.category-page .aside li {
+		height: 46px;
 		line-height: 46px;
 		text-align: center;
-	}
-	
-	.pagination-aside ul li:hover {
-		color: red;
-		width: 86px;
-		height: 46px;
-		background-color: white;
-		cursor: pointer;
-	}
-	
-	.pagination-main {
-		min-height: 100%;
-		width: 100%;
-		padding-left: 86px;
+		/*border-bottom: solid 1px #CCCCCC;*/
 		box-sizing: border-box;
-	}
-	
-	.pagination-main {
-		width: 100%;
-		height: auto;
-	}
-	/*//*/
-	/*//*/
-	
-	.pagination-main {
-		width: 100%;
-		margin: 12px;
-		overflow: hidden;
-		padding-right: 10px;
-	}
-	
-	.pagination-main .swiper-container {
-		width: 100%;
-	}
-	
-	.pagination-main .swiper-container img {
-		width: 100%;		
-	}
-	
-	.pagination-main .list-hot {
-		width: 100%;
-		height: 50px;
-		padding-top: 10px;
-	}
-	
-	.pagination-main h4 {
-		float: left;
-		font-size: 14px;
-	}
-	
-	.pagination-main .list-hot small {
-		font-size: 12px;
-		float: right;
-		display: block;
-		padding-right: 30px;
-	}
-	
-	.pagination-main .list-hot small img {
-		width: 17px;
-		margin-bottom: -4px;
-	}
-	
-	.pagination-main-ul {
-		width: 100%;
-	}
-	
-	.pagination-main-ul li {
-		margin-bottom: 20px;
-		float: left;
-		width: 30%;
-		text-align: center;
-	}
-	
-	.pagination-main-ul li img {
-		width: 100px;
-		height: 100px;
-		margin-bottom: 5px;
-	}
-	
-	.pagination-main-ul li a {
-		display: block;
 		color: #333;
-		text-align: center;
-		font-size:12px;
+		font-size: 14px
 	}
 	
-	.category-img {
-		width: 100%;
-		padding: 10px 10px 0px 0px;
-		box-sizing: border-box;
+	.category-page .aside li.active {
+		color: #f23030;
+		background-color:#ffffff;
 	}
 	
-	.category-img img {
-		width: 100%;
-		height: 100%;
+	.category-page .content {
+		overflow: hidden;
+		position: relative;
 	}
-	/*/头部/*/
 	
-	.categorys .top {
+	.category-list {
 		width: 100%;
-		height: 45px;
-		position: fixed;
+		position: absolute;
 		top: 0px;
 		left: 0px;
-		z-index: 9999;
-		border-bottom: 1px solid #ccc;
-		background-color: white;
 	}
 	
-	.categorys .search {
-		text-align: center;
+	.category-image {
+		padding: 7px 7px 0px;
+		box-sizing: border-box;
+	}
+	
+	.category-image img {
 		width: 100%;
 	}
 	
-	.categorys .search .kuohao {
-		width: 24px;
-		height: 24px;
-		position: absolute;
-		top: 10px;
-		left: 10px;
+	.category-jd {
+		padding: 19px 7px 0px;
+		box-sizing: border-box;
 	}
 	
-	.categorys .search input {
-		width: 300px;
-		height: 24px;
-		background-color: #ddd;
-		border-radius: 12px;
-		border: 0px;
-		margin-top: 10px;
-		padding-left: 32px;
-		z-index: -1;
-		margin-right: 20px;
-		position: relative;
-		left: 2px;
-	}
-	
-	.categorys .search i {
-		position: absolute;
-		top: 15px;
-		left: 46px;
-	}
-	
-	.categorys .search a {
-		color: white;
-		width: 36px;
-		height: 24px;
-		background-color: #E93B3D;
-		display: inline-block;
-		border-radius: 5px;
-		text-align: center;
-		line-height: 24px;
+	.category-jd .title {
 		font-size: 14px;
-		position: absolute;
-		top: 10px;
-		right: 10px;
+		color: #333;
+		margin: 0;
+		padding: 0;
+		line-height: 1em;
+		font-weight: 700;
+		color: #080808;
+	}
+	
+	.category-jd ul {
+		margin: 9px 0px 0px;
+		padding: 0px;
+	}
+	
+	.category-jd li {
+		width: 33.333%;
+		list-style: none;
+		text-align: center;
+	}
+	
+	.category-jd li img {
+		width: 70px;
+		height: 70px;
+	}
+	
+	.category-jd li .product-name {
+		color: #333;
+		height: 35px;
+		margin-top: 2px;
+		font-size:12px;
 	}
 </style>
