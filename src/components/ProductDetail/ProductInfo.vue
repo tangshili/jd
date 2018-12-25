@@ -56,7 +56,7 @@
 	
 	.product-desciption .title .h-1 h1 {
 		font-weight: normal;
-		line-height: 16px;
+		line-height: 20px;
 	}
 	
 	.product-desciption .title .attention {

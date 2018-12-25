@@ -49,8 +49,8 @@
 	height:70px;
 	overflow:hidden;
 	position:absolute;
-	top:25px;
-	left:45px;
+	top:-15px;
+	left:60px;
 }
 
 #ad-swiper .swiper-wrapper{

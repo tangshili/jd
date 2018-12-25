@@ -31,5 +31,12 @@
 </script>
 
 <style>
-
+	.swiper-container {
+		width: 100%;
+		margin-top: 50px;
+	}
+	
+	.swiper-container img {
+		width: 100%;
+	}
 </style>
